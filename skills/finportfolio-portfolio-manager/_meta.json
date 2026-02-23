@@ -1,0 +1,11 @@
+{
+  "name": "finportfolio-portfolio-manager",
+  "version": "1.0.0",
+  "description": "Record portfolio transactions, update holdings, and refresh live prices",
+  "clawdbot": {
+    "emoji": "💼",
+    "requires": {
+      "bins": ["python3", "uv", "bash"]
+    }
+  }
+}
