@@ -1,0 +1,13 @@
+# Secrets — never commit
+*.env
+.env*
+secrets/
+credentials/
+
+# OpenClaw sensitive exports
+openclaw.json
+*.bak
+
+# System
+.DS_Store
+Thumbs.db
