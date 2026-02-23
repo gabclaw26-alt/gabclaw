@@ -65,3 +65,14 @@
 - Playwright Chromium: ~/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome
 - Use `openclaw browser open <url>`, `openclaw browser screenshot`, `openclaw browser snapshot` for web tasks.
 - `noSandbox: true` (VPS environment — no SUID sandbox).
+
+## Skills & Tools (ClawHub)
+- **clawhub**: Use `npx clawhub@latest install <skill>` to install new skills (run as root).
+- **sonoscli** ✓ Ready — Control Sonos speakers via `sonos` binary.
+  - `sonos discover` / `sonos status` / `sonos play|pause|stop --name "Room"`
+  - `sonos volume set 15 --name "Room"` / `sonos favorites list`
+  - Binary: ~/go/bin/sonos | Skill: ~/vault/skills/sonoscli/
+- Go bin path: ~/go/bin (in PATH)
+- To install new clawhub skills: `npx clawhub@latest install <skillname>`
+- To list available skills: `openclaw skills list`
+- To check skill status: `openclaw skills check`
