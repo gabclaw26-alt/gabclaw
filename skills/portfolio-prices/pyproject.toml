@@ -1,0 +1,10 @@
+[project]
+name = "portfolio-prices"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.5",
+    "yfinance>=1.2.0",
+]

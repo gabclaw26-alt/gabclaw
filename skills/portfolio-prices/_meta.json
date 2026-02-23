@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-prices",
+  "version": "1.0.0",
+  "description": "Fetch live prices for all portfolio holdings and save to current_prices.json",
+  "clawdbot": {
+    "emoji": "📈",
+    "requires": {
+      "bins": ["python3", "uv"]
+    }
+  }
+}
