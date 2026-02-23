@@ -1,0 +1,449 @@
+{
+  "holdings": [
+    {
+      "asset": "Bitcoin",
+      "ticker": "BTC",
+      "quantity": 0.3760367,
+      "localCurrency": "USD",
+      "sector": "Crypto",
+      "country": "crypto",
+      "type": "Crypto",
+      "techExposed": true
+    },
+    {
+      "asset": "IAU",
+      "ticker": "IAU",
+      "quantity": 355,
+      "localCurrency": "USD",
+      "sector": "Gold",
+      "country": "US",
+      "type": "Gold",
+      "techExposed": false
+    },
+    {
+      "asset": "BIL",
+      "ticker": "BIL",
+      "quantity": 370,
+      "localCurrency": "USD",
+      "sector": "Cash/T-Bills",
+      "country": "US",
+      "type": "Fixed Income",
+      "techExposed": false
+    },
+    {
+      "asset": "WEGE3",
+      "ticker": "WEGE3",
+      "quantity": 2701,
+      "localCurrency": "BRL",
+      "sector": "Industrials",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "ITUB3",
+      "ticker": "ITUB3",
+      "quantity": 2585,
+      "localCurrency": "BRL",
+      "sector": "Financials",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "TFLO",
+      "ticker": "TFLO",
+      "quantity": 253.4945,
+      "localCurrency": "USD",
+      "sector": "Cash/T-Bills",
+      "country": "US",
+      "type": "Fixed Income",
+      "techExposed": false
+    },
+    {
+      "asset": "SQQQ",
+      "ticker": "SQQQ",
+      "quantity": 15,
+      "localCurrency": "USD",
+      "sector": "Technology",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "HGLG11",
+      "ticker": "HGLG11",
+      "quantity": 332,
+      "localCurrency": "BRL",
+      "sector": "Logistics FII",
+      "country": "Brazil",
+      "type": "FII",
+      "techExposed": false
+    },
+    {
+      "asset": "XPML11",
+      "ticker": "XPML11",
+      "quantity": 469,
+      "localCurrency": "BRL",
+      "sector": "Retail Malls FII",
+      "country": "Brazil",
+      "type": "FII",
+      "techExposed": false
+    },
+    {
+      "asset": "ASML",
+      "ticker": "ASML",
+      "quantity": 4.0,
+      "localCurrency": "USD",
+      "sector": "Semi Equip",
+      "country": "Netherlands",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "UBS Group",
+      "ticker": "UBS",
+      "quantity": 210,
+      "localCurrency": "USD",
+      "sector": "Financials",
+      "country": "Switzerland",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "TSMC",
+      "ticker": "TSM",
+      "quantity": 13,
+      "localCurrency": "USD",
+      "sector": "Semiconductors",
+      "country": "Taiwan",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "Prologis",
+      "ticker": "PLD",
+      "quantity": 54.5,
+      "localCurrency": "USD",
+      "sector": "REIT",
+      "country": "US",
+      "type": "REITS",
+      "techExposed": false
+    },
+    {
+      "asset": "SAPR4",
+      "ticker": "SAPR4",
+      "quantity": 4900,
+      "localCurrency": "BRL",
+      "sector": "Utilities",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Realty Income",
+      "ticker": "O",
+      "quantity": 95,
+      "localCurrency": "USD",
+      "sector": "REIT",
+      "country": "US",
+      "type": "REITS",
+      "techExposed": false
+    },
+    {
+      "asset": "VALE3",
+      "ticker": "VALE3",
+      "quantity": 439,
+      "localCurrency": "BRL",
+      "sector": "Materials",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "BBDC3",
+      "ticker": "BBDC3",
+      "quantity": 1800,
+      "localCurrency": "BRL",
+      "sector": "Financials",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Ethereum",
+      "ticker": "ETH",
+      "quantity": 1.166041,
+      "localCurrency": "USD",
+      "sector": "Crypto",
+      "country": "crypto",
+      "type": "Crypto",
+      "techExposed": true
+    },
+    {
+      "asset": "VRTA11",
+      "ticker": "VRTA11",
+      "quantity": 275,
+      "localCurrency": "BRL",
+      "sector": "CRI FII",
+      "country": "Brazil",
+      "type": "FII",
+      "techExposed": false
+    },
+    {
+      "asset": "FLRY3",
+      "ticker": "FLRY3",
+      "quantity": 1244,
+      "localCurrency": "BRL",
+      "sector": "Healthcare",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Alphabet",
+      "ticker": "GOOGL",
+      "quantity": 13,
+      "localCurrency": "USD",
+      "sector": "Technology",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "Microsoft",
+      "ticker": "MSFT",
+      "quantity": 7,
+      "localCurrency": "USD",
+      "sector": "Technology",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "NextEra",
+      "ticker": "NEE",
+      "quantity": 40,
+      "localCurrency": "USD",
+      "sector": "Utilities",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Cameco",
+      "ticker": "CCJ",
+      "quantity": 35,
+      "localCurrency": "USD",
+      "sector": "Energy/Uranium",
+      "country": "Canada",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "EGIE3",
+      "ticker": "EGIE3",
+      "quantity": 400,
+      "localCurrency": "BRL",
+      "sector": "Utilities",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "SLCE3",
+      "ticker": "SLCE3",
+      "quantity": 838,
+      "localCurrency": "BRL",
+      "sector": "Agriculture",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "TAEE4",
+      "ticker": "TAEE4",
+      "quantity": 1100,
+      "localCurrency": "BRL",
+      "sector": "Utilities",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Costco",
+      "ticker": "COST",
+      "quantity": 3,
+      "localCurrency": "USD",
+      "sector": "Consumer",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "DBS Group",
+      "ticker": "DBSDY",
+      "quantity": 50,
+      "localCurrency": "USD",
+      "sector": "Financials",
+      "country": "Singapore",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Amazon",
+      "ticker": "AMZN",
+      "quantity": 10,
+      "localCurrency": "USD",
+      "sector": "Technology",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "Apple",
+      "ticker": "AAPL",
+      "quantity": 9,
+      "localCurrency": "USD",
+      "sector": "Technology",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "Lockheed",
+      "ticker": "LMT",
+      "quantity": 5,
+      "localCurrency": "USD",
+      "sector": "Defense",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Linde",
+      "ticker": "LIN",
+      "quantity": 8.3,
+      "localCurrency": "USD",
+      "sector": "Materials",
+      "country": "Ireland",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "ExxonMobil",
+      "ticker": "XOM",
+      "quantity": 50,
+      "localCurrency": "USD",
+      "sector": "Energy",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "MicroStrategy",
+      "ticker": "MSTR",
+      "quantity": 0,
+      "localCurrency": "USD",
+      "sector": "BTC proxy",
+      "country": "US",
+      "type": "Stocks",
+      "techExposed": true
+    },
+    {
+      "asset": "SANB3",
+      "ticker": "SANB3",
+      "quantity": 600,
+      "localCurrency": "BRL",
+      "sector": "Financials",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "Avalanche",
+      "ticker": "AVAX",
+      "quantity": 83.86027,
+      "localCurrency": "USD",
+      "sector": "Crypto",
+      "country": "crypto",
+      "type": "Crypto",
+      "techExposed": true
+    },
+    {
+      "asset": "BLAU3",
+      "ticker": "BLAU3",
+      "quantity": 470,
+      "localCurrency": "BRL",
+      "sector": "Healthcare",
+      "country": "Brazil",
+      "type": "Stocks",
+      "techExposed": false
+    },
+    {
+      "asset": "RECR11",
+      "ticker": "RECR11",
+      "quantity": 21,
+      "localCurrency": "BRL",
+      "sector": "CRI FII",
+      "country": "Brazil",
+      "type": "FII",
+      "techExposed": false
+    },
+    {
+      "asset": "Tesouro IPCA+ 2026",
+      "ticker": "Tesouro IPCA+ 2026",
+      "quantity": 3.12,
+      "localCurrency": "BRL",
+      "sector": "Fixed Income",
+      "country": "Brazil",
+      "type": "Fixed Income",
+      "techExposed": false,
+      "costBasis": 10087.72
+    },
+    {
+      "asset": "Tesouro IPCA+ 2045",
+      "ticker": "Tesouro IPCA+ 2045",
+      "quantity": 6.03,
+      "localCurrency": "BRL",
+      "sector": "Fixed Income",
+      "country": "Brazil",
+      "type": "Fixed Income",
+      "techExposed": false,
+      "costBasis": 7477.08
+    },
+    {
+      "asset": "Tesouro IPCA+ 2050",
+      "ticker": "Tesouro IPCA+ 2050",
+      "quantity": 1.43,
+      "localCurrency": "BRL",
+      "sector": "Fixed Income",
+      "country": "Brazil",
+      "type": "Fixed Income",
+      "techExposed": false,
+      "costBasis": 1234.70
+    },
+    {
+      "asset": "Tesouro IPCA+ c/ Juros 2030",
+      "ticker": "Tesouro IPCA+ c/ Juros 2030",
+      "quantity": 1.0,
+      "localCurrency": "BRL",
+      "sector": "Fixed Income",
+      "country": "Brazil",
+      "type": "Fixed Income",
+      "techExposed": false,
+      "costBasis": 4254.97
+    },
+    {
+      "asset": "Tesouro Educa+ 2035",
+      "ticker": "Tesouro Educa+ 2035",
+      "quantity": 7.41,
+      "localCurrency": "BRL",
+      "sector": "Fixed Income",
+      "country": "Brazil",
+      "type": "Fixed Income",
+      "techExposed": false,
+      "costBasis": 14987.98
+    }
+  ]
+}

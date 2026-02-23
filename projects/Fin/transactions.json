@@ -1,0 +1,578 @@
+{
+  "source": "Bastter System Export Sep 11 2025.pdf",
+  "as_of": "2025-12-22",
+  "notes": "Amounts are copied from the PDF. 'gross_amount' is the 'Operação' column; 'net_amount' is 'Operação Liq.' when shown. Currency follows the PDF entry. Manual entries may be appended (e.g., IBKR trades).",
+  "portfolio": {
+    "emergency_fund": [
+      {
+        "asset": "Fundo DI RICO",
+        "currency": "BRL",
+        "current_quantity": null,
+        "transactions": []
+      }
+    ],
+    "acoes_brazil": [
+      {
+        "ticker": "BBDC3",
+        "currency": "BRL",
+        "current_quantity": 1800,
+        "transactions": [
+          {"date": "2021-09-19", "type": "buy",  "quantity": 455,  "gross_amount": 8259.90,  "net_amount": null},
+          {"date": "2023-03-24", "type": "buy",  "quantity": 1000, "gross_amount": 11369.01, "net_amount": null},
+          {"date": "2024-07-18", "type": "buy",  "quantity": 300,  "gross_amount": 3471.80,  "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "BLAU3",
+        "currency": "BRL",
+        "current_quantity": 470,
+        "transactions": [
+          {"date": "2023-06-22", "type": "buy", "quantity": 100, "gross_amount": 2632.00, "net_amount": null},
+          {"date": "2023-06-27", "type": "buy", "quantity": 200, "gross_amount": 3922.98, "net_amount": null},
+          {"date": "2023-09-18", "type": "buy", "quantity": 170, "gross_amount": 2862.80, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "EGIE3",
+        "currency": "BRL",
+        "current_quantity": 400,
+        "transactions": [
+          {"date": "2023-06-15", "type": "buy", "quantity": 100, "gross_amount": 4499.00, "net_amount": null},
+          {"date": "2023-06-29", "type": "buy", "quantity": 100, "gross_amount": 4491.00, "net_amount": null},
+          {"date": "2023-09-18", "type": "buy", "quantity": 200, "gross_amount": 8532.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "ENBR3",
+        "currency": "BRL",
+        "current_quantity": 0,
+        "transactions": [
+          {"date": "2019-12-16", "type": "buy",  "quantity": 300,  "gross_amount": 6203.94,  "net_amount": null},
+          {"date": "2020-02-24", "type": "buy",  "quantity": 200,  "gross_amount": 3140.00,  "net_amount": null},
+          {"date": "2020-04-24", "type": "buy",  "quantity": 100,  "gross_amount": 1570.00,  "net_amount": null},
+          {"date": "2023-06-09", "type": "sell", "quantity": -600, "gross_amount": 14006.50, "net_amount": 13896.66}
+        ]
+      },
+      {
+        "ticker": "FLRY3",
+        "currency": "BRL",
+        "current_quantity": 1244,
+        "transactions": [
+          {"date": "2018-03-23", "type": "buy", "quantity": 200, "gross_amount": 5434.00,  "net_amount": null},
+          {"date": "2018-09-17", "type": "buy", "quantity": 100, "gross_amount": 2280.73,  "net_amount": null},
+          {"date": "2019-01-17", "type": "buy", "quantity": 300, "gross_amount": 6330.02,  "net_amount": null},
+          {"date": "2020-03-12", "type": "buy", "quantity": 35,  "gross_amount": 844.22,   "net_amount": null},
+          {"date": "2020-05-04", "type": "buy", "quantity": 50,  "gross_amount": 1090.00,  "net_amount": null},
+          {"date": "2022-10-08", "type": "buy", "quantity": 500, "gross_amount": 8020.00,  "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "GETT3",
+        "currency": "BRL",
+        "current_quantity": 150,
+        "transactions": [
+          {"date": "2021-10-19", "type": "buy", "quantity": 150, "gross_amount": 333.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "ITUB3",
+        "currency": "BRL",
+        "current_quantity": 2585,
+        "transactions": [
+          {"date": "2018-03-23", "type": "buy",  "quantity": 300,  "gross_amount": 13122.00, "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 200,  "gross_amount": 4510.00,  "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 200,  "gross_amount": 4510.00,  "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 300,  "gross_amount": 6770.00,  "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 100,  "gross_amount": 2260.00,  "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 100,  "gross_amount": 2260.00,  "net_amount": null},
+          {"date": "2020-04-15", "type": "buy",  "quantity": 100,  "gross_amount": 2260.00,  "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 500,  "gross_amount": 11130.00, "net_amount": null},
+          {"date": "2020-04-24", "type": "buy",  "quantity": 300,  "gross_amount": 6030.00,  "net_amount": null},
+          {"date": "2020-04-24", "type": "buy",  "quantity": 100,  "gross_amount": 2010.00,  "net_amount": null},
+          {"date": "2020-09-25", "type": "buy",  "quantity": 100,  "gross_amount": 2165.00,  "net_amount": null},
+          {"date": "2020-09-25", "type": "buy",  "quantity": 100,  "gross_amount": 2164.00,  "net_amount": null},
+          {"date": "2021-10-19", "type": "sell", "quantity": -700, "gross_amount": 18865.00, "net_amount": 18865.00},
+          {"date": "2025-01-10", "type": "buy",  "quantity": 500,  "gross_amount": 13585.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "PETR4",
+        "currency": "BRL",
+        "current_quantity": 0,
+        "transactions": [
+          {"date": "2018-10-30", "type": "buy",  "quantity": 400,  "gross_amount": 10698.96, "net_amount": null},
+          {"date": "2020-02-26", "type": "buy",  "quantity": 300,  "gross_amount": 8040.30,  "net_amount": null},
+          {"date": "2023-07-11", "type": "sell", "quantity": -600, "gross_amount": 17544.00, "net_amount": 17544.00},
+          {"date": "2025-08-21", "type": "sell", "quantity": -100, "gross_amount": 3005.00,  "net_amount": 3005.00}
+        ]
+      },
+      {
+        "ticker": "SANB3",
+        "currency": "BRL",
+        "current_quantity": 600,
+        "transactions": [
+          {"date": "2021-09-19", "type": "buy", "quantity": 600, "gross_amount": 10632.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "SAPR4",
+        "currency": "BRL",
+        "current_quantity": 4900,
+        "transactions": [
+          {"date": "2020-10-30", "type": "buy", "quantity": 100,  "gross_amount": 480.00,  "net_amount": null},
+          {"date": "2020-10-30", "type": "buy", "quantity": 1600, "gross_amount": 7680.00, "net_amount": null},
+          {"date": "2020-10-30", "type": "buy", "quantity": 100,  "gross_amount": 480.00,  "net_amount": null},
+          {"date": "2020-10-30", "type": "buy", "quantity": 100,  "gross_amount": 480.00,  "net_amount": null},
+          {"date": "2021-04-08", "type": "buy", "quantity": 1000, "gross_amount": 4361.30, "net_amount": null},
+          {"date": "2021-04-15", "type": "buy", "quantity": 1000, "gross_amount": 4300.00, "net_amount": null},
+          {"date": "2023-07-11", "type": "buy", "quantity": 1000, "gross_amount": 4170.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "SLCE3",
+        "currency": "BRL",
+        "current_quantity": 838,
+        "transactions": [
+          {"date": "2022-11-11", "type": "buy", "quantity": 200, "gross_amount": 8904.00, "net_amount": null},
+          {"date": "2023-06-15", "type": "buy", "quantity": 100, "gross_amount": 3546.00, "net_amount": null},
+          {"date": "2023-12-14", "type": "buy", "quantity": 100, "gross_amount": 1879.00, "net_amount": null},
+          {"date": "2024-08-16", "type": "buy", "quantity": 100, "gross_amount": 1769.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "TAEE4",
+        "currency": "BRL",
+        "current_quantity": 1100,
+        "transactions": [
+          {"date": "2020-10-30", "type": "buy", "quantity": 200, "gross_amount": 1878.00, "net_amount": null},
+          {"date": "2020-10-30", "type": "buy", "quantity": 400, "gross_amount": 3756.00, "net_amount": null},
+          {"date": "2020-10-30", "type": "buy", "quantity": 500, "gross_amount": 4705.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "VALE3",
+        "currency": "BRL",
+        "current_quantity": 439,
+        "transactions": [
+          {"date": "2022-07-01", "type": "buy", "quantity": 160, "gross_amount": 12066.23, "net_amount": null},
+          {"date": "2022-11-17", "type": "buy", "quantity": 7,   "gross_amount": 568.05,   "net_amount": null},
+          {"date": "2023-07-11", "type": "buy", "quantity": 200, "gross_amount": 13044.00, "net_amount": null},
+          {"date": "2024-08-19", "type": "buy", "quantity": 40,  "gross_amount": 2293.22,  "net_amount": null},
+          {"date": "2024-10-02", "type": "buy", "quantity": 7,   "gross_amount": 459.58,   "net_amount": null},
+          {"date": "2025-05-13", "type": "buy", "quantity": 25,  "gross_amount": 1379.84,  "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "WEGE3",
+        "currency": "BRL",
+        "current_quantity": 2701,
+        "transactions": [
+          {"date": "2018-03-22", "type": "buy",  "quantity": 500,  "gross_amount": 11553.17, "net_amount": null},
+          {"date": "2018-04-25", "type": "buy",  "quantity": 150,  "gross_amount": 609.00,   "net_amount": null},
+          {"date": "2019-01-17", "type": "buy",  "quantity": 200,  "gross_amount": 3769.20,  "net_amount": null},
+          {"date": "2019-03-14", "type": "buy",  "quantity": 300,  "gross_amount": 5831.84,  "net_amount": null},
+          {"date": "2020-07-07", "type": "sell", "quantity": -300, "gross_amount": 16040.00, "net_amount": 16040.00},
+          {"date": "2020-07-15", "type": "sell", "quantity": -49,  "gross_amount": 2650.00,  "net_amount": 2650.00},
+          {"date": "2020-08-04", "type": "sell", "quantity": -1,   "gross_amount": 54.17,    "net_amount": 54.17},
+          {"date": "2021-01-06", "type": "sell", "quantity": -200, "gross_amount": 16640.00, "net_amount": 16640.00},
+          {"date": "2021-01-07", "type": "buy",  "quantity": 200,  "gross_amount": 16424.00, "net_amount": null},
+          {"date": "2022-07-01", "type": "buy",  "quantity": 400,  "gross_amount": 10380.71, "net_amount": null},
+          {"date": "2022-08-05", "type": "buy",  "quantity": 300,  "gross_amount": 8652.00,  "net_amount": null},
+          {"date": "2023-10-27", "type": "buy",  "quantity": 101,  "gross_amount": 3190.99,  "net_amount": null},
+          {"date": "2025-01-28", "type": "buy",  "quantity": 100,  "gross_amount": 5368.40,  "net_amount": null},
+          {"date": "2025-03-26", "type": "buy",  "quantity": 200,  "gross_amount": 9342.66,  "net_amount": null}
+        ]
+      }
+    ],
+    "us_stocks": [
+      {
+        "ticker": "AAPL",
+        "currency": "USD",
+        "current_quantity": 9.0,
+        "transactions": [
+          {"date": "2022-07-11", "type": "buy", "quantity": 9.0, "gross_amount": 1309.68}
+        ]
+      },
+      {
+        "ticker": "AMZN",
+        "currency": "USD",
+        "current_quantity": 10.0,
+        "transactions": [
+          {"date": "2022-05-13", "type": "buy", "quantity": 0.5, "gross_amount": 1126.00}
+        ]
+      },
+      {
+        "ticker": "ASML",
+        "currency": "USD",
+        "current_quantity": 4.0,
+        "transactions": [
+          {"date": "2022-10-18", "type": "buy",  "quantity": 2.5,   "gross_amount": 998.57},
+          {"date": "2022-11-17", "type": "buy",  "quantity": 1.0,   "gross_amount": 588.38},
+          {"date": "2023-02-02", "type": "buy",  "quantity": 3.0,   "gross_amount": 2073.27},
+          {"date": "2024-10-17", "type": "buy",  "quantity": 1.75,  "gross_amount": 1193.11},
+          {"date": "2025-11-10", "type": "sell", "quantity": -4.25, "gross_amount": 18629.83}
+        ]
+      },
+      {
+        "ticker": "CCJ",
+        "currency": "USD",
+        "current_quantity": 35.0,
+        "transactions": [
+          {"date": "2022-05-13", "type": "buy",  "quantity": 50.0,  "gross_amount": 1101.75},
+          {"date": "2023-10-10", "type": "buy",  "quantity": 30.0,  "gross_amount": 1083.00},
+          {"date": "2024-08-09", "type": "sell", "quantity": -80.0, "gross_amount": 3125.67},
+          {"date": "2025-10-06", "type": "buy",  "quantity": 35.0,  "gross_amount": 3017.94}
+        ]
+      },
+      {
+        "ticker": "COST",
+        "currency": "USD",
+        "current_quantity": 3.0,
+        "transactions": [
+          {"date": "2024-10-07", "type": "buy", "quantity": 3.0, "gross_amount": 2633.85}
+        ]
+      },
+      {
+        "ticker": "DBSDY",
+        "currency": "USD",
+        "current_quantity": 50.0,
+        "transactions": [
+          {"date": "2025-08-15", "type": "buy", "quantity": 50.0, "gross_amount": 7830.00, "note": "ADR; comment in PDF about 1:4 vs 200 shares on IBKR"}
+        ]
+      },
+      {
+        "ticker": "DIS",
+        "currency": "USD",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2021-12-02", "type": "buy",  "quantity": 2.5,     "gross_amount": 359.95},
+          {"date": "2022-05-13", "type": "buy",  "quantity": 5.55255, "gross_amount": 594.40},
+          {"date": "2024-11-20", "type": "sell", "quantity": -8.05255,"gross_amount": 909.39}
+        ]
+      },
+      {
+        "ticker": "GOOGL",
+        "currency": "USD",
+        "current_quantity": 13.0,
+        "transactions": [
+          {"date": "2022-11-10", "type": "buy", "quantity": 13.0, "gross_amount": 1215.50}
+        ]
+      },
+      {
+        "ticker": "LLY",
+        "currency": "USD",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2024-03-04", "type": "buy",  "quantity": 2.0,  "gross_amount": 1596.28},
+          {"date": "2024-10-07", "type": "buy",  "quantity": 2.0,  "gross_amount": 1798.78},
+          {"date": "2024-11-20", "type": "sell", "quantity": -4.0, "gross_amount": 3001.72}
+        ]
+      },
+      {
+        "ticker": "LMT",
+        "currency": "USD",
+        "current_quantity": 5.0,
+        "transactions": [
+          {"date": "2023-02-02", "type": "buy", "quantity": 5.0, "gross_amount": 2289.25}
+        ]
+      },
+      {
+        "ticker": "LIN",
+        "currency": "USD",
+        "current_quantity": 8.3,
+        "transactions": [
+          {"date": "2025-11-10", "type": "buy", "quantity": 8.3, "gross_amount": 3496.75}
+        ]
+      },
+      {
+        "ticker": "MSFT",
+        "currency": "USD",
+        "current_quantity": 7.0,
+        "transactions": [
+          {"date": "2022-05-13", "type": "buy", "quantity": 5.0, "gross_amount": 1305.45},
+          {"date": "2023-02-03", "type": "buy", "quantity": 2.0, "gross_amount": 516.00}
+        ]
+      },
+      {
+        "ticker": "MSTR",
+        "currency": "USD",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2024-04-03", "type": "buy",  "quantity": 2.0,   "gross_amount": 2583.63},
+          {"date": "2024-09-17", "type": "buy",  "quantity": 20.0,  "gross_amount": 2660.00},
+          {"date": "2025-01-07", "type": "sell", "quantity": -15.0, "gross_amount": 5669.55},
+          {"date": "2025-02-24", "type": "sell", "quantity": -20.0, "gross_amount": 5614.00},
+          {"date": "2025-03-04", "type": "sell", "quantity": -5.0,  "gross_amount": 1237.41},
+          {"date": "2025-05-09", "type": "buy",  "quantity": 8.5,   "gross_amount": 3509.03},
+          {"date": "2025-11-10", "type": "sell", "quantity": -8.5,  "gross_amount": 17116.79}
+        ]
+      },
+      {
+        "ticker": "NEE",
+        "currency": "USD",
+        "current_quantity": 40.0,
+        "transactions": [
+          {"date": "2023-10-23", "type": "buy", "quantity": 40.0, "gross_amount": 2113.82}
+        ]
+      },
+      {
+        "ticker": "NVO",
+        "currency": "USD",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2024-03-04", "type": "buy",  "quantity": 13.0,  "gross_amount": 1673.33},
+          {"date": "2024-11-20", "type": "sell", "quantity": -13.0, "gross_amount": 1372.17}
+        ]
+      },
+      {
+        "ticker": "TSM",
+        "currency": "USD",
+        "current_quantity": 13.0,
+        "transactions": [
+          {"date": "2022-07-11", "type": "buy",  "quantity": 20.0,  "gross_amount": 1592.20},
+          {"date": "2022-08-08", "type": "buy",  "quantity": 1.0,   "gross_amount": 88.00},
+          {"date": "2025-01-28", "type": "buy",  "quantity": 30.0,  "gross_amount": 5765.55},
+          {"date": "2025-02-04", "type": "sell", "quantity": -26.0, "gross_amount": 5247.19},
+          {"date": "2025-11-10", "type": "sell", "quantity": -12.0, "gross_amount": 42360.24}
+        ]
+      },
+      {
+        "ticker": "UBS",
+        "currency": "USD",
+        "current_quantity": 210.0,
+        "transactions": [
+          {"date": "2025-04-25", "type": "buy", "quantity": 100.0, "gross_amount": 2996.00},
+          {"date": "2025-07-18", "type": "buy", "quantity": 100.0, "gross_amount": 3620.50},
+          {"date": "2025-09-24", "type": "buy", "quantity": 10.0,  "gross_amount": 417.50}
+        ]
+      },
+      {
+        "ticker": "XOM",
+        "currency": "USD",
+        "current_quantity": 50.0,
+        "transactions": [
+          {"date": "2025-11-10", "type": "buy", "quantity": 50.0, "gross_amount": 5854.50}
+        ]
+      }
+    ],
+    "us_reits": [
+      {
+        "ticker": "LAND",
+        "currency": "USD",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2024-03-04", "type": "buy",  "quantity": 100.0,  "gross_amount": 1320.00},
+          {"date": "2024-07-10", "type": "buy",  "quantity": 164.0,  "gross_amount": 2271.17},
+          {"date": "2025-05-21", "type": "sell", "quantity": -264.0, "gross_amount": 2502.77}
+        ]
+      },
+      {
+        "ticker": "O",
+        "currency": "USD",
+        "current_quantity": 95.0,
+        "transactions": [
+          {"date": "2023-10-10", "type": "buy", "quantity": 45.0, "gross_amount": 2203.90},
+          {"date": "2024-03-04", "type": "buy", "quantity": 50.0, "gross_amount": 2647.89}
+        ]
+      },
+      {
+        "ticker": "PLD",
+        "currency": "USD",
+        "current_quantity": 54.5,
+        "transactions": [
+          {"date": "2023-10-10", "type": "buy", "quantity": 20.0,  "gross_amount": 2149.75},
+          {"date": "2024-03-04", "type": "buy", "quantity": 10.0,  "gross_amount": 1327.61},
+          {"date": "2024-04-23", "type": "buy", "quantity": 24.5,  "gross_amount": 2569.55}
+        ]
+      }
+    ],
+    "bdrs": [
+      {
+        "ticker": "XPBR31",
+        "currency": "BRL",
+        "current_quantity": 0,
+        "transactions": [
+          {"date": "2021-10-19", "type": "buy",  "quantity": 42.0,  "gross_amount": 2558.69, "net_amount": null},
+          {"date": "2021-11-01", "type": "sell", "quantity": -42.0, "gross_amount": 7893.48, "net_amount": 7893.48}
+        ]
+      }
+    ],
+    "us_etfs": [
+      {
+        "ticker": "BIL",
+        "currency": "USD",
+        "current_quantity": 370.0,
+        "transactions": [
+          {"date": "2025-12-22", "type": "buy", "quantity": 100.0, "gross_amount": 9131.00, "net_amount": null, "note": "IBKR; 100 @ 91.31"}
+        ]
+      },
+      {
+        "ticker": "IAU",
+        "currency": "USD",
+        "current_quantity": 355.0,
+        "transactions": [
+          {"date": "2025-11-10", "type": "buy", "quantity": 15.0, "gross_amount": 1156.95}
+        ]
+      },
+      {
+        "ticker": "TFLO",
+        "currency": "USD",
+        "current_quantity": 253.4945,
+        "transactions": [
+          {"date": "2025-11-20", "type": "sell", "quantity": -25.0, "gross_amount": 1263.75}
+        ]
+      },
+      {
+        "ticker": "SQQQ",
+        "currency": "USD",
+        "current_quantity": 15.0,
+        "transactions": [
+          {"date": "2025-11-20", "type": "buy", "quantity": 15.0, "gross_amount": 1215.15}
+        ]
+      }
+    ],
+    "fiis_brazil": [
+      {
+        "ticker": "HGBS11",
+        "currency": "BRL",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2018-03-16", "type": "buy",  "quantity": 3.0,   "gross_amount": 2374.98,  "net_amount": null},
+          {"date": "2021-06-18", "type": "sell", "quantity": -30.0, "gross_amount": 6022.20,  "net_amount": 6020.40}
+        ]
+      },
+      {
+        "ticker": "HGLG11",
+        "currency": "BRL",
+        "current_quantity": 332.0,
+        "transactions": [
+          {"date": "2018-06-05", "type": "buy",  "quantity": 200.0, "gross_amount": 29798.00, "net_amount": null},
+          {"date": "2020-01-08", "type": "sell", "quantity": -200.0,"gross_amount": 39998.00, "net_amount": 39983.56},
+          {"date": "2021-10-27", "type": "buy",  "quantity": 200.0, "gross_amount": 33340.00, "net_amount": null},
+          {"date": "2023-08-01", "type": "buy",  "quantity": 32.0,  "gross_amount": 4982.40,  "net_amount": null},
+          {"date": "2025-01-10", "type": "buy",  "quantity": 100.0, "gross_amount": 15060.00, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "HGRE11",
+        "currency": "BRL",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2018-03-16", "type": "buy",  "quantity": 10.0,  "gross_amount": 14870.00, "net_amount": null},
+          {"date": "2021-01-04", "type": "buy",  "quantity": 14.0,  "gross_amount": 2128.14,  "net_amount": null},
+          {"date": "2021-10-27", "type": "sell", "quantity": -114.0,"gross_amount": 14592.00, "net_amount": 14592.00}
+        ]
+      },
+      {
+        "ticker": "KNRI11",
+        "currency": "BRL",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2018-03-16", "type": "buy",  "quantity": 50.0,  "gross_amount": 8449.50,  "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 88.0,  "gross_amount": 13280.00, "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 6.0,   "gross_amount": 905.34,   "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 30.0,  "gross_amount": 4530.00,  "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 10.0,  "gross_amount": 1510.00,  "net_amount": null},
+          {"date": "2020-04-17", "type": "buy",  "quantity": 16.0,  "gross_amount": 2420.00,  "net_amount": null},
+          {"date": "2021-10-27", "type": "sell", "quantity": -4.0,  "gross_amount": 548.60,   "net_amount": 548.60},
+          {"date": "2021-10-27", "type": "sell", "quantity": -196.0,"gross_amount": 26855.92, "net_amount": 26855.92}
+        ]
+      },
+      {
+        "ticker": "RCRB11",
+        "currency": "BRL",
+        "current_quantity": 0.0,
+        "transactions": [
+          {"date": "2018-03-16", "type": "buy",  "quantity": 50.0, "gross_amount": 8890.00,  "net_amount": null},
+          {"date": "2021-04-27", "type": "buy",  "quantity": 28.0, "gross_amount": 4417.06,  "net_amount": null},
+          {"date": "2021-10-27", "type": "sell", "quantity": -78.0,"gross_amount": 11266.32, "net_amount": 11266.32}
+        ]
+      },
+      {
+        "ticker": "RECR11",
+        "currency": "BRL",
+        "current_quantity": 21.0,
+        "transactions": [
+          {"date": "2022-01-27", "type": "buy", "quantity": 21.0, "gross_amount": 2160.27, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "VRTA11",
+        "currency": "BRL",
+        "current_quantity": 275.0,
+        "transactions": [
+          {"date": "2018-03-16", "type": "buy", "quantity": 50.0, "gross_amount": 5329.50, "net_amount": null},
+          {"date": "2018-03-16", "type": "buy", "quantity": 40.0, "gross_amount": 4260.80, "net_amount": null},
+          {"date": "2020-09-25", "type": "buy", "quantity": 60.0, "gross_amount": 6239.40, "net_amount": null},
+          {"date": "2021-04-27", "type": "buy", "quantity": 40.0, "gross_amount": 4613.96, "net_amount": null},
+          {"date": "2023-03-31", "type": "buy", "quantity": 85.0, "gross_amount": 7264.36, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "XPML11",
+        "currency": "BRL",
+        "current_quantity": 469.0,
+        "transactions": [
+          {"date": "2021-10-27", "type": "buy", "quantity": 202.0, "gross_amount": 19874.78, "net_amount": null},
+          {"date": "2025-01-06", "type": "buy", "quantity": 117.0, "gross_amount": 11517.61, "net_amount": null},
+          {"date": "2025-01-10", "type": "buy", "quantity": 150.0, "gross_amount": 14700.00, "net_amount": null}
+        ]
+      }
+    ],
+    "reserva_valor_crypto": [
+      {
+        "ticker": "BITCOIN",
+        "currency": "Crypto",
+        "current_quantity": 0.3760367,
+        "transactions": [
+          {"date": "2026-01-22", "type": "buy", "quantity": 0.0205287, "gross_amount": 1842.91, "net_amount": null}
+        ]
+      },
+      {"ticker": "ETHEREUM",  "currency": "Crypto", "current_quantity": 1.1660408156, "transactions": []},
+      {"ticker": "AVALANCHE", "currency": "Crypto", "current_quantity": 83.8602705,   "transactions": []}
+    ],
+    "renda_fixa_tesouro": [
+      {
+        "ticker": "Tesouro IPCA+ 2026",
+        "currency": "BRL",
+        "transactions": [
+          {"date": "2022-10-18", "type": "buy", "quantity": 0.18, "gross_amount": 578.09,   "net_amount": null},
+          {"date": "2022-11-11", "type": "buy", "quantity": 0.44, "gross_amount": 1398.73,  "net_amount": null},
+          {"date": "2022-11-11", "type": "buy", "quantity": 2.50, "gross_amount": 8110.90,  "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "Tesouro IPCA+ 2045",
+        "currency": "BRL",
+        "transactions": [
+          {"date": "2018-08-01", "type": "buy",  "quantity": 33.59, "gross_amount": 26648.29, "net_amount": null},
+          {"date": "2019-09-11", "type": "sell", "quantity": -20.0, "gross_amount": 25054.41, "net_amount": 0.00},
+          {"date": "2019-12-23", "type": "sell", "quantity": -13.59,"gross_amount": 18273.30, "net_amount": 0.00},
+          {"date": "2023-06-15", "type": "buy",  "quantity": 4.03,  "gross_amount": 4997.12,  "net_amount": null},
+          {"date": "2023-06-15", "type": "buy",  "quantity": 2.00,  "gross_amount": 2479.96,  "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "Tesouro IPCA+ 2050",
+        "currency": "BRL",
+        "transactions": [
+          {"date": "2025-08-15", "type": "buy", "quantity": 1.43, "gross_amount": 1234.70, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "Tesouro IPCA+ c/ Juros 2030",
+        "currency": "BRL",
+        "transactions": [
+          {"date": "2024-12-16", "type": "buy", "quantity": 1.00, "gross_amount": 4254.97, "net_amount": null}
+        ]
+      },
+      {
+        "ticker": "Tesouro Educa+ 2035",
+        "currency": "BRL",
+        "transactions": [
+          {"date": "2026-01-22", "type": "buy", "quantity": 7.41, "gross_amount": 14987.98, "net_amount": null}
+        ]
+      }
+    ]
+  }
+}
