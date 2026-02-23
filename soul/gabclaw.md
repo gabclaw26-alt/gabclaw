@@ -43,3 +43,25 @@
 - Agent identity "Honu" confirmed with gabclaw as primary user
 - Telegram bot @Gabclaw26bot active
 - Tailscale VPN access confirmed at 100.111.183.126
+
+## Python Environment Rules
+- **Always use `uv`** for all Python work — never bare `pip` or `python -m venv`.
+- **Every project gets its own virtual env** created with `uv venv` inside the project folder.
+- Workflow:
+  ```bash
+  cd ~/vault/projects/my-project
+  uv venv                  # creates .venv/
+  source .venv/bin/activate
+  uv add requests pandas   # install packages
+  uv run script.py         # run without activating
+  ```
+- Use `uv init` to scaffold new projects.
+- Use `uv sync` to reproduce environments from `pyproject.toml`.
+- **Never install packages globally** — always inside a project venv.
+- uv binary: /snap/bin/uv (v0.10.4)
+
+## Browser Capabilities
+- Headless Chromium available via OpenClaw browser commands.
+- Playwright Chromium: ~/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome
+- Use `openclaw browser open <url>`, `openclaw browser screenshot`, `openclaw browser snapshot` for web tasks.
+- `noSandbox: true` (VPS environment — no SUID sandbox).
