@@ -9,10 +9,6 @@ import requests
 import yfinance as yf
 from datetime import datetime
 from typing import Dict, Optional
-import os
-
-PORTFOLIO_PATH = os.path.expanduser("~/vault/projects/Fin/portfolio.json")
-OUTPUT_PATH = os.path.expanduser("~/vault/projects/Fin/current_prices.json")
 
 
 def get_usd_brl_rate() -> float:
@@ -23,6 +19,7 @@ def get_usd_brl_rate() -> float:
         if not data.empty:
             return float(data['Close'].iloc[-1])
         else:
+            # Fallback to inverse of USD/BRL
             ticker = yf.Ticker("USDBRL=X")
             data = ticker.history(period="1d")
             if not data.empty:
@@ -37,6 +34,9 @@ def get_usd_brl_rate() -> float:
 def get_tesouro_prices() -> Dict[str, float]:
     """
     Fetch Tesouro Direto prices from Gabriel Gaspar's free API.
+
+    Returns a dictionary mapping bond names to unit prices (unitary redemption value).
+    API: https://tesouro.gabrielgaspar.com.br/bonds
     """
     try:
         url = "https://tesouro.gabrielgaspar.com.br/bonds"
@@ -44,6 +44,8 @@ def get_tesouro_prices() -> Dict[str, float]:
         response.raise_for_status()
         data = response.json()
 
+        # Map portfolio names to API bond name patterns
+        # API returns bonds with names like "Tesouro IPCA+ 2026", "Tesouro IPCA+ com Juros Semestrais 2030"
         name_mapping = {
             "Tesouro IPCA+ 2026": ["IPCA+", "2026"],
             "Tesouro IPCA+ 2045": ["IPCA+", "2045"],
@@ -56,7 +58,9 @@ def get_tesouro_prices() -> Dict[str, float]:
         bonds = data.get('bonds', data) if isinstance(data, dict) else data
 
         for bond in bonds:
+            # The API may return different field names, try common ones
             bond_name = bond.get('name', '') or bond.get('bond_name', '')
+            # Try different price field names
             bond_price = (
                 bond.get('unitary_redemption_value') or
                 bond.get('price') or
@@ -67,7 +71,9 @@ def get_tesouro_prices() -> Dict[str, float]:
             if bond_price is None:
                 continue
 
+            # Match each portfolio name against API data
             for portfolio_name, patterns in name_mapping.items():
+                # Exclude "Semestrais" pattern for non-Juros bonds
                 if "Juros" not in portfolio_name and "Semestrais" in bond_name:
                     continue
                 if all(pattern in bond_name for pattern in patterns):
@@ -87,14 +93,17 @@ def get_tesouro_prices() -> Dict[str, float]:
 def get_crypto_price(ticker: str) -> Optional[float]:
     """Fetch cryptocurrency price in USD."""
     try:
+        # Map common crypto tickers to yfinance format
         crypto_map = {
             "BTC": "BTC-USD",
             "ETH": "ETH-USD",
             "AVAX": "AVAX-USD"
         }
+
         symbol = crypto_map.get(ticker, f"{ticker}-USD")
         crypto = yf.Ticker(symbol)
         data = crypto.history(period="1d")
+
         if not data.empty:
             return float(data['Close'].iloc[-1])
         return None
@@ -106,11 +115,19 @@ def get_crypto_price(ticker: str) -> Optional[float]:
 def get_stock_price(ticker: str, local_currency: str, asset_type: str) -> Optional[float]:
     """Fetch stock price in the specified currency."""
     try:
+        # Skip fixed income assets that are not traded on exchanges
         if asset_type == "Fixed Income" and local_currency == "BRL" and "Tesouro" in ticker:
             return None
-        symbol = f"{ticker}.SA" if local_currency == "BRL" else ticker
+
+        # Brazilian stocks need .SA suffix
+        if local_currency == "BRL":
+            symbol = f"{ticker}.SA"
+        else:
+            symbol = ticker
+
         stock = yf.Ticker(symbol)
         data = stock.history(period="1d")
+
         if not data.empty:
             return float(data['Close'].iloc[-1])
         return None
@@ -119,21 +136,28 @@ def get_stock_price(ticker: str, local_currency: str, asset_type: str) -> Option
         return None
 
 
-def fetch_all_prices(portfolio_path: str = PORTFOLIO_PATH) -> Dict:
-    """Fetch current prices for all holdings in the portfolio."""
+def fetch_all_prices(portfolio_path: str = "portfolio.json") -> Dict:
+    """
+    Fetch current prices for all holdings in the portfolio.
+
+    Returns a dictionary with ticker prices in local currency and USD.
+    """
+    # Load portfolio
     with open(portfolio_path, 'r') as f:
         portfolio = json.load(f)
 
+    # Get USD/BRL exchange rate
     print("Fetching USD/BRL exchange rate...")
     usd_brl_rate = get_usd_brl_rate()
     print(f"USD/BRL rate: {usd_brl_rate:.4f}")
 
-    print("\nFetching Tesouro Direto prices...")
+    # Fetch Tesouro Direto prices from Dados de Mercado API
+    print("\nFetching Tesouro Direto prices from API...")
     tesouro_prices = get_tesouro_prices()
     if tesouro_prices:
         print(f"  Retrieved prices for {len(tesouro_prices)} Tesouro bonds")
     else:
-        print("  No Tesouro prices available (using costBasis fallback)")
+        print("  No Tesouro prices available (will use costBasis as fallback)")
 
     prices = {
         "timestamp": datetime.now().isoformat(),
@@ -141,37 +165,50 @@ def fetch_all_prices(portfolio_path: str = PORTFOLIO_PATH) -> Dict:
         "holdings": []
     }
 
+    # Process each holding
     for holding in portfolio['holdings']:
         asset = holding['asset']
         ticker = holding['ticker']
         local_currency = holding['localCurrency']
         asset_type = holding['type']
 
-        print(f"\nFetching {asset} ({ticker})...")
+        print(f"\nFetching price for {asset} ({ticker})...")
 
         price_local = None
         price_usd = None
 
+        # Handle different asset types
         if asset_type == "Crypto":
             price_usd = get_crypto_price(ticker)
-            price_local = price_usd * usd_brl_rate if (price_usd and local_currency == "BRL") else price_usd
+            if price_usd and local_currency == "BRL":
+                price_local = price_usd * usd_brl_rate
+            else:
+                price_local = price_usd
 
         elif asset_type == "Fixed Income" and "Tesouro" in str(ticker):
+            # Try to get Tesouro price from API
             if ticker in tesouro_prices:
                 price_local = tesouro_prices[ticker]
                 price_usd = price_local / usd_brl_rate
             else:
+                # Fallback to costBasis if available
                 cost_basis = holding.get('costBasis')
-                if cost_basis and holding['quantity'] > 0:
-                    price_local = cost_basis / holding['quantity']
-                    price_usd = price_local / usd_brl_rate
+                if cost_basis:
+                    price_local = cost_basis / holding['quantity'] if holding['quantity'] > 0 else None
+                    if price_local:
+                        price_usd = price_local / usd_brl_rate
 
-        else:
+        else:  # Stocks, ETFs, REITs, FII, etc.
             if ticker:
                 price_local = get_stock_price(ticker, local_currency, asset_type)
-                if price_local:
-                    price_usd = price_local / usd_brl_rate if local_currency == "BRL" else price_local
 
+                if price_local:
+                    if local_currency == "BRL":
+                        price_usd = price_local / usd_brl_rate
+                    else:
+                        price_usd = price_local
+
+        # Create price entry
         price_entry = {
             "asset": asset,
             "ticker": ticker,
@@ -187,17 +224,23 @@ def fetch_all_prices(portfolio_path: str = PORTFOLIO_PATH) -> Dict:
         prices['holdings'].append(price_entry)
 
         if price_local:
-            source = ""
+            # Show source for Tesouro bonds
             if asset_type == "Fixed Income" and "Tesouro" in str(ticker):
-                source = f" [{'API' if ticker in tesouro_prices else 'costBasis'}]"
-            print(f"  {price_local:.2f} {local_currency} (${price_usd:.2f} USD){source}")
+                source = "API" if ticker in tesouro_prices else "costBasis"
+                print(f"  Price: {price_local:.2f} {local_currency} (${price_usd:.2f} USD) [{source}]")
+            else:
+                print(f"  Price: {price_local:.2f} {local_currency} (${price_usd:.2f} USD)")
         else:
-            print(f"  Unable to fetch price")
+            if asset_type == "Fixed Income" and local_currency == "BRL" and "Tesouro" in str(ticker):
+                print(f"  Price: Unable to fetch (no API data or costBasis)")
+            else:
+                print(f"  Price: Unable to fetch")
 
     return prices
 
 
 def main():
+    """Main function to fetch prices and save to JSON."""
     print("=" * 60)
     print("Portfolio Price Update")
     print("=" * 60)
@@ -205,17 +248,17 @@ def main():
     try:
         prices = fetch_all_prices()
 
-        with open(OUTPUT_PATH, 'w') as f:
+        # Save to JSON file
+        output_file = "current_prices.json"
+        with open(output_file, 'w') as f:
             json.dump(prices, f, indent=2)
 
         print("\n" + "=" * 60)
-        print(f"Prices saved to {OUTPUT_PATH}")
+        print(f"Prices saved to {output_file}")
 
+        # Calculate totals
         total_usd = sum(h['value_usd'] for h in prices['holdings'] if h['value_usd'])
-        fetched = sum(1 for h in prices['holdings'] if h['value_usd'])
-        print(f"Assets priced: {fetched}/{len(prices['holdings'])}")
         print(f"Total portfolio value: ${total_usd:,.2f} USD")
-        print(f"USD/BRL rate: {prices['usd_brl_rate']:.4f}")
         print("=" * 60)
 
     except Exception as e:
