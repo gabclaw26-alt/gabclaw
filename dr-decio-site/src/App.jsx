@@ -227,16 +227,16 @@ const Features = () => {
     {
       pattern: 'typewriter',
       icon: Activity,
-      title: 'Tratamento Dual',
-      description: 'Abordagem integrada que combina psicoterapia e medicação quando necessário, garantindo um tratamento completo e personalizado para cada paciente.',
-      details: ['Psicoterapia integrada', 'Acompanhamento psiquiátrico', 'Prescrição quando indicado']
+      title: 'Tratamento Dual (Psicoterapia + Medicação)',
+      description: 'Abordagem integrada que combina psicoterapia e medicação quando necessário, garantindo um tratamento completo e personalizado. O mesmo profissional conduz e prescreve.',
+      details: ['Psicoterapia integrada', 'Prescrição psiquiátrica', 'Acompanhamento completo']
     },
     {
       pattern: 'scheduler',
       icon: Video,
-      title: 'Teleconsulta para Todo Brasil',
+      title: 'Teleconsulta para Todo Brasil e Exterior',
       description: 'Atendimento online disponível para brasileiros em qualquer lugar do Brasil e no exterior, mantendo a mesma qualidade e sigilo do atendimento presencial.',
-      details: ['Todo Brasil', 'Brasileiros no exterior', '相同的专业水平']
+      details: ['Todo Brasil', 'Brasileiros no exterior', 'Qualidade presencial']
     }
   ]
 
@@ -396,15 +396,37 @@ const Philosophy = () => {
 
           <div ref={el => textRefs.current[2]}>
             <p className="text-lg text-ivory/70 leading-relaxed max-w-2xl mx-auto">
-              Com mais de três décadas de experiência, desenvolvi uma abordagem que integra 
-              a psicanálise junguiana com ferramentas psiquiátricas modernas. O objetivo não 
-              é apenas aliviar sintomas, mas promover uma <span className="text-champagne">transformação genuína</span> 
-              através da compreensão profunda do inconsciente.
+              Médico psicanalista, psicoterapeuta e psiquiatra especialista em adultos, utilizo os fundamentos da psicologia profunda na resolução definitiva dos transtornos emocionais podendo inicialmente associar ao tratamento medicamentoso no intuito de aliviar sintomas aflitivos.
+            </p>
+            <p className="text-lg text-ivory/70 leading-relaxed max-w-2xl mx-auto mt-4">
+              Sou Médico com título de especialista em <span className="text-champagne">Psiquiatria</span> e título de especialista na área de atuação de <span className="text-champagne">Psicoterapia</span>, ambos conferidos pela Associação Médica Brasileira e Associação Brasileira de Psiquiatria.
             </p>
           </div>
 
+          {/* Credentials */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6 text-left max-w-3xl mx-auto">
+            <div className="rounded-2xl p-5 bg-obsidian/50 border border-slate/30">
+              <Award className="w-8 h-8 text-champagne mb-3" />
+              <h4 className="font-display font-semibold text-ivory">Formação</h4>
+              <p className="text-sm text-ivory/60 mt-2">Medicina - UERJ</p>
+              <p className="text-sm text-ivory/60">Psicanálise - SBPP, 1987</p>
+            </div>
+            <div className="rounded-2xl p-5 bg-obsidian/50 border border-slate/30">
+              <Shield className="w-8 h-8 text-champagne mb-3" />
+              <h4 className="font-display font-semibold text-ivory">Especialidades</h4>
+              <p className="text-sm text-ivory/60 mt-2">Psiquiatria - AMB/ABP, 2008</p>
+              <p className="text-sm text-ivory/60">Psicoterapia - AMB/ABP, 2011</p>
+            </div>
+            <div className="rounded-2xl p-5 bg-obsidian/50 border border-slate/30">
+              <Star className="w-8 h-8 text-champagne mb-3" />
+              <h4 className="font-display font-semibold text-ivory">Registro</h4>
+              <p className="text-sm text-ivory/60 mt-2">CRM RJ: 156481</p>
+              <p className="text-sm text-ivory/60">RQE Nº: 28107</p>
+            </div>
+          </div>
+
           <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {['Psicoterapia', 'Psicanálise', 'Psiquiatria', 'Junguiana', 'Psicoterapia Breve'].map((spec, i) => (
+            {['Psicoterapia', 'Psicanálise', 'Psiquiatria', 'Junguiana', 'Psicoterapia Breve', 'Tratamento Dual', 'Interpretação de Sonhos'].map((spec, i) => (
               <span key={i} className="px-4 py-2 rounded-full bg-slate/40 border border-slate/40 text-ivory/70 text-sm">
                 {spec}
               </span>
@@ -534,8 +556,10 @@ const Conditions = () => {
   const sectionRef = useRef(null)
 
   const conditions = [
-    'Estresse', 'Ansiedade', 'Depressão', 'Transtornos de humor',
-    'Pânico', 'Fobias', 'Insônia', 'Dificuldades relacionais'
+    'Transtornos De Estresse', 'Transtornos de Ansiedade Generalizados', 'Transtorno Depressivo',
+    'Transtornos Fóbicos', 'Transtornos Do Humor', 'Depressão', 'Transtorno Da Personalidade Obsessivo-compulsiva',
+    'Transtorno De Pânico', 'Disfunções sexuais psicogênicas', 'Transtorno da Ansiedade',
+    'Dificuldades no relacionamento', 'Alterações do humor', 'Insônia'
   ]
 
   useEffect(() => {
@@ -705,11 +729,35 @@ const CTA = () => {
           <h3 className="font-serif text-4xl md:text-6xl text-ivory mb-8">
             Pronto para <span className="italic text-champagne">transformação</span>?
           </h3>
-          <p className="text-xl text-ivory/70 mb-12 leading-relaxed">
+          <p className="text-xl text-ivory/70 mb-8 leading-relaxed">
             Agende sua consulta e descubra uma abordagem que vai além do sintoma 
             para tratar a raiz do sofrimento. Atendimento presencial no Rio de Janeiro 
             e teleconsulta para todo o Brasil.
           </p>
+
+          {/* Pricing */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
+            <div className="rounded-2xl p-6 bg-obsidian/50 border border-slate/30">
+              <h4 className="font-display font-semibold text-ivory mb-2">Teleconsulta</h4>
+              <div className="text-3xl font-display font-bold text-champagne">R$ 350</div>
+              <p className="text-sm text-ivory/50 mt-2">por sessão</p>
+            </div>
+            <div className="rounded-2xl p-6 bg-obsidian/50 border border-slate/30">
+              <h4 className="font-display font-semibold text-ivory mb-2">Tratamento da Ansiedade</h4>
+              <div className="text-3xl font-display font-bold text-champagne">R$ 350</div>
+              <p className="text-sm text-ivory/50 mt-2">por sessão</p>
+            </div>
+            <div className="rounded-2xl p-6 bg-obsidian/50 border border-slate/30">
+              <h4 className="font-display font-semibold text-ivory mb-2">Tratamento da Depressão</h4>
+              <div className="text-3xl font-display font-bold text-champagne">R$ 350</div>
+              <p className="text-sm text-ivory/50 mt-2">por sessão</p>
+            </div>
+            <div className="rounded-2xl p-6 bg-obsidian/50 border border-slate/30">
+              <h4 className="font-display font-semibold text-ivory mb-2">Tratamento de Fobias</h4>
+              <div className="text-3xl font-display font-bold text-champagne">R$ 350</div>
+              <p className="text-sm text-ivory/50 mt-2">por sessão</p>
+            </div>
+          </div>
           
           <div className="flex flex-wrap justify-center gap-4">
             <button className="btn-primary bg-champagne text-obsidian px-10 py-5 rounded-full font-semibold text-xl shadow-xl shadow-champagne/20">
