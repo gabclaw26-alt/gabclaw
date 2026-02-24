@@ -2,6 +2,10 @@
 
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
 
+## Web Search Preference
+- **Exa** for web search/scraping
+- **Firecrawl** for browser automation only (when interaction needed: clicks, forms, pagination)
+
 ## What Goes Here
 
 Things like:
