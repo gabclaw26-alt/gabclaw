@@ -1,0 +1,27 @@
+[2026-02-24 13:28:44] === Starting OpenClaw backup ===
+[2026-02-24 13:28:44] Setting up backup repository...
+[2026-02-24 13:28:44] Backing up critical files...
+[2026-02-24 13:28:49] Scanning for secrets...
+[2026-02-24 13:28:49] Sanitized openclaw/config.json
+[2026-02-24 13:28:49] Sanitized ./vault/AGENTS.md
+[2026-02-24 13:28:49] Sanitized ./skills/website-builder/SKILL.md
+[2026-02-24 13:28:49] Sanitized ./skills/portfolio-prices/.venv/lib/python3.12/site-packages/pyparsing/ai/best_practices.md
+[2026-02-24 13:28:49] Sanitized ./skills/portfolio-prices/.venv/lib/python3.12/site-packages/playhouse/README.md
+[2026-02-24 13:28:49] Sanitized ./openclaw/config.json
+[2026-02-24 13:28:49] Committing: backup: 2026-02-24 -  41 files changed, 4355 insertions(+)
+[2026-02-24 13:28:49] Pushing to GitHub...
+[2026-02-24 13:28:50] ERROR: Push failed
+{"ok":true,"result":{"message_id":313,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1771939731,"text":"\ud83d\udd34 *Backup FAILED*\n\nPush failed"}}[2026-02-24 13:29:27] === Starting OpenClaw backup ===
+[2026-02-24 13:29:27] Setting up backup repository...
+[2026-02-24 13:29:28] Backing up critical files...
+[2026-02-24 13:29:29] Scanning for secrets...
+[2026-02-24 13:29:29] Sanitized openclaw/config.json
+[2026-02-24 13:29:29] Sanitized ./vault/AGENTS.md
+[2026-02-24 13:29:29] Sanitized ./skills/website-builder/SKILL.md
+[2026-02-24 13:29:29] Sanitized ./skills/portfolio-prices/.venv/lib/python3.12/site-packages/pyparsing/ai/best_practices.md
+[2026-02-24 13:29:29] Sanitized ./skills/portfolio-prices/.venv/lib/python3.12/site-packages/playhouse/README.md
+[2026-02-24 13:29:29] Sanitized ./openclaw/config.json
+[2026-02-24 13:29:29] Committing: backup: 2026-02-24 -  41 files changed, 4355 insertions(+)
+[2026-02-24 13:29:29] Pushing to GitHub...
+[2026-02-24 13:29:30] Backup complete:  41 files changed, 4355 insertions(+)
+{"ok":true,"result":{"message_id":315,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1771939771,"text":"\ud83d\udce6 *Backup Complete*\n\n 41 files changed, 4355 insertions( )\n\nPrivate repo updated"}}[2026-02-24 13:29:31] === Backup done ===
