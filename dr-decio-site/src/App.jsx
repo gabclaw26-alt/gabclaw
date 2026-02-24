@@ -110,16 +110,28 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian/70 via-transparent to-obsidian/30" />
       </div>
 
+      {/* Doctor Photo - Bottom Right */}
+      <div className="absolute bottom-24 right-6 md:right-24 z-10 hidden md:block">
+        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-champagne/30 shadow-2xl">
+          <img 
+            src="https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/724152/72415230977e525aca89dbc79a6fa5c0_large.jpg" 
+            alt="Dr. Decio Deforme da Cunha" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       <div className="relative z-10 container mx-auto px-6">
         <div ref={titleRef} className="hero-title max-w-4xl mb-8">
-          <div className="word overflow-hidden"><span className="line-1 text-ivory">Cuidados mentais</span></div>
-          <div className="word overflow-hidden"><span className="line-1 text-ivory">encontram</span></div>
-          <div className="word overflow-hidden"><span className="line-2">profundidade</span></div>
+          <div className="word overflow-hidden"><span className="line-1 text-ivory">Psicanálise breve</span></div>
+          <div className="word overflow-hidden"><span className="line-1 text-ivory">com interpretação</span></div>
+          <div className="word overflow-hidden"><span className="line-2">de sonhos</span></div>
         </div>
         
         <p ref={subtitleRef} className="text-lg md:text-xl text-ivory/70 max-w-xl mb-10 leading-relaxed font-sans">
+          Dr. Decio Deforme da Cunha — Psicanalista e Psiquiatra no Rio de Janeiro. 
           Tratamento resolutivo através de psicanálises breves e interpretação de sonhos. 
-          Uma abordagem única que combina ciência e humanismo no coração do Rio de Janeiro.
+          Atendimento presencial e teleconsulta para todo o Brasil.
         </p>
 
         <div ref={ctaRef} className="flex flex-wrap gap-4">
@@ -148,10 +160,10 @@ const Stats = () => {
   const statItemsRef = useRef([])
 
   const stats = [
-    { icon: Star, value: '342', label: 'Avaliações de pacientes' },
-    { icon: MessageCircle, value: '82', label: 'Perguntas respondidas' },
+    { icon: Star, value: '500+', label: 'Avaliações de pacientes' },
+    { icon: MessageCircle, value: '82+', label: 'Perguntas respondidas' },
     { icon: Clock, value: '37+', label: 'Anos de experiência' },
-    { icon: Heart, value: '5000+', label: 'Pacientes atendidos' }
+    { icon: Heart, value: 'CRM RJ 156481', label: 'Psiquiatra RQE 28107' }
   ]
 
   useEffect(() => {
@@ -572,21 +584,39 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: "Após anos tentando entender minhas ansiedades, finalmente encontrei um profissional que realmente ouve. O tratamento com interpretação de sonhos mudou completamente minha perspectiva de vida.",
-      author: "Mariana S.",
-      role: "Paciente há 2 anos",
+      quote: "Já havia passado por psicólogos e nunca psiquiatras, posso dizer que o Dr. Décio foi um divisor de águas. Já recomendei ele para diversos amigos. Impressionante como ele consegue revelar todo nosso inconsciente através dos sonhos.",
+      author: "Paciente",
+      role: "Tratamento para ansiedade",
       rating: 5
     },
     {
-      quote: "A teleconsulta foi uma bénção durante a pandemia. O Dr. Decio mantém a mesma qualidade de atendimento online que presencial. Profissionalismo e humanidade rarefeitos.",
-      author: "Carlos R.",
-      role: "Paciente há 5 anos",
+      quote: "Dr. Décio é um terapeuta completo, maduro, experiente, humano, ético e responsável. Tem sido um cirurgião de alma. Um bisturi que remove as angústias e abre espaço para a expansão da consciência.",
+      author: "Araci e Ranonzinho",
+      role: "Pacientes",
       rating: 5
     },
     {
-      quote: "Procureihelp para depression e, após o tratamento dual, minha vida mudou. Não apenas os sintomas melhoraram, mas entendi as raízes do meu sofrimento. Transformação real.",
-      author: "Patrícia L.",
-      role: "Paciente há 1 ano",
+      quote: "Há muitos anos não vejo um profissional como Dr Decio. Ele tem um dom fenomenal para a psicanálise e psiquiatria. Nunca vou esquecer das palavras que ouvi na primeira consulta.",
+      author: "Paciente",
+      role: "Tratamento depressivo",
+      rating: 5
+    },
+    {
+      quote: "Excelente profissional, atencioso, com boas explicações. Excelente abordagem e atendimento. Uma consulta completamente diferente de todas que já fui em psiquiatria.",
+      author: "Paciente",
+      role: "Tratamento de estresse",
+      rating: 5
+    },
+    {
+      quote: "Dr Décio, além de transmitir muita segurança, demonstra experiência e conhecimento na área, o que deixa o tratamento mais objetivo e eficaz.",
+      author: "Paciente",
+      role: "Tratamento combinado",
+      rating: 5
+    },
+    {
+      quote: "Muito atencioso e paciente, escuta, conversa e explica de forma clara e gentil. Gostei muito! As explicações fazendo comparativos me deram coragem para olhar pra frente.",
+      author: "Paciente",
+      role: "Terapia psicanalítica",
       rating: 5
     }
   ]
@@ -780,7 +810,7 @@ const Footer = () => {
           <div className="flex gap-6">
             <a href="#" className="hover:text-champagne transition-colors">Privacidade</a>
             <a href="#" className="hover:text-champagne transition-colors">Termos</a>
-            <a href="#" className="hover:text-champagne transition-colors">CRM-RJ: 000000</a>
+            <a href="#" className="hover:text-champagne transition-colors">CRM-RJ: 156481</a>
           </div>
         </div>
       </div>
