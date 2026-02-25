@@ -1,0 +1,275 @@
+-----------------------------------------------------------------------
+-->    CO2 storage example 
+------------------------------------------------------------------------
+
+RUNSPEC
+
+--Request the METRIC unit set
+
+METRIC
+
+-- Capillary pressure mode
+-- PW = P - PC
+-- PG = P
+OPTIONS3
+  7* 1 /
+
+-- Include diffusion
+DIFFUSE
+
+--Four components in study.
+COMPS
+ 4 /
+
+DIMENS
+ 51 51 1 /
+
+TABDIMS
+ 1 1 40 40 /
+
+HWELLS
+
+CO2STORE
+
+FULLIMP
+
+SOLID
+
+START
+ 1 AUG 2004 /
+
+--UNIFOUT
+--UNIFIN
+--FMTOUT
+
+--Grid section--------------------------------------------------------
+
+GRID
+--Basic grid block sizes
+
+INIT
+
+DX
+ 2601*25 /
+
+DY
+ 2601*25 /
+
+DZ
+ 2601*10
+ /
+
+--Cell top depths - only for first layer specified
+TOPS
+ 2601*1411.4 /                                                       
+
+PORO
+ 2601*0.2
+/
+
+--PERMX
+-- 2601*100.0
+--/
+INCLUDE
+PERMI_1.INC
+/
+
+COPY 
+ PERMX PERMY / 
+ PERMX PERMZ / 
+/
+
+RPTGRID
+ 'DEPTH' /
+
+--Properties section-----------------------------------------------
+
+EDIT
+
+MULTIPLY
+PORV   100000.0  1 51  1  1  1  1 /
+PORV   100000.0  1 51 51 51  1  1 /
+PORV   100000.0  1  1  2 50  1  1 /
+PORV   100000.0 51 51  2 50  1  1 /
+/
+
+
+
+PROPS
+
+CNAMES
+  'H2O' 'CO2' 'NACL'  'CACL2' /
+
+ZMFVD
+-- depth  h20  co2  nacl  cacl2 
+ 1411.4   0.9109 0.0  0.0741     0.015 
+ 1413.227 0.9109 0.0  0.0741     0.015 / 
+
+-- Solid component NACL_S reference density
+SDREF
+ 2* 2170.0 1* / 
+
+-- Mobility multiplier
+SOLIDMMS
+-- SS   Mult
+   0.0    1.0
+   0.1    0.5
+   0.8    0.0 /
+--
+-- Set diffusion constants (example)
+--
+DIFFCWAT
+-- h2o   co2   nacl          cacl2 
+  0.0001  0.0001  0.0001     0.0001 /
+
+DIFFCGAS
+--  h2o  co2
+   0.001 0.001  / 
+ 
+-- Temp in deg C
+RTEMP
+ 32.2 /
+
+-- Water saturation functions
+WSF
+--   Sw         Krw        
+--  -----      -----      
+    0.3        0.0         
+    0.38       0.000152    
+    0.46       0.002439    
+    0.53       0.012346    
+    0.61       0.039018    
+    0.69       0.09526     
+    0.77       0.197531    
+    0.84       0.36595     
+    0.92       0.624295    
+    1.0        1.0      /        
+
+
+-- Gas saturation functions
+GSF
+--   Sg         Krg      Drain Pcog    
+--  -----      ------    ----------    
+    0.0        0.0         0.           
+    0.08       0.0         0.6           
+    0.16       0.000407    0.78           
+    0.23       0.005831    0.93           
+    0.31       0.024131    1.09          
+    0.39       0.064892    1.26          
+    0.47       0.140566    1.49          
+    0.54       0.269314    1.84          
+    0.62       0.484797    2.53          
+    0.7        1.0         10.0   /
+
+
+--Rock data
+
+ROCK
+ 137.2  7.25E-5 /
+
+ZCRIT
+ 4*5 /
+
+
+--Solution section------------------------------------------------------
+
+REGIONS
+
+SOLUTION
+
+--Equilibration data 
+EQUIL
+ 1411.7 174 0.0 0 0.0 0 1 1 0  /
+
+RPTRST
+ BASIC=2 PRESSURE FLORES RESTART SGAS SWAT DENG DENW VGAS VWAT XMF AQSP AQPH SSOLID BASIC=2 /
+
+
+RPTSOL
+  BASIC=2 PRESSURE FLORES RESTART SGAS SWAT DENG DENW VGAS VWAT XMF AQSP AQPH SSOLID BASIC=2 /
+--BASIC=2 PRESSURE FLORES FLOGAS FLOOIL FLOWAT/
+-- PRESSURE SGAS SWAT DENG DENW VGAS VWAT XMF AQSP AQPH SSOLID  BASIC=2 FLOWS PRESSURE ALLPROPS / 
+
+FIELDSEP
+ 1 15.0 1.01 /
+/
+
+SUMMARY    =============================================================
+
+FPR
+FGIPL
+FGIPG
+
+WBHP
+ CO2_INJ / 
+
+FGIR
+
+TCPU
+
+
+
+RUNSUM
+
+ALL
+
+MSUMLINS
+
+MSUMNEWT
+
+CVFR
+*/
+/
+
+--Schedule section------------------------------------------------------
+
+SCHEDULE
+
+
+-- Lower throughput target and solution change target for aim selection
+-- and increase implicitness, do eval every time step.
+
+
+RPTSCHED
+ BASIC=2 PRESSURE FLORES RESTART SGAS SWAT DENG DENW VGAS VWAT XMF AQSP AQPH SSOLID BASIC=2 /
+
+--Define injection well
+WELSPECS
+ 'CO2_INJ' FIELD 26 26 1431.7 GAS /
+/
+
+COMPDAT
+-- name     I  J J1 K2 OPEN/SHUT 
+ 'CO2_INJ' 26 26  1  1        1* 1* 1* 0.09 4* /
+ /
+
+WELLSTRE
+ 'SeqCO2' 0.0 1.0 /
+/
+
+WINJGAS
+ 'CO2_INJ' STREAM 'SeqCO2' /
+/
+
+--
+-- BHP LIMIT 400 bar
+--
+
+WCONINJE
+-- 'CO2_INJ' GAS OPEN RATE 5.736E5 1* 400.0 /
+ 'CO2_INJ' GAS OPEN BHP 2* 250.0 /
+/
+          
+TSTEP
+20*365
+/
+
+WCONINJE
+ 'CO2_INJ' GAS SHUT BHP 2* 250.0 /
+/
+
+TSTEP
+40*365
+/
+
+END
