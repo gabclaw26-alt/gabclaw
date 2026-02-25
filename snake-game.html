@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Neon Snake</title>
+  <style>
+    :root {
+      --bg: #05080a;
+      --panel: #0a1115;
+      --grid: #112128;
+      --neon: #39ff14;
+      --neon-soft: #22c80b;
+      --text: #b8ffc0;
+      --danger: #ff3f3f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 15% 20%, #0f1d20 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, #0d171b 0%, transparent 40%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 0.04em;
+    }
+
+    .game-shell {
+      width: min(92vw, 560px);
+      background: linear-gradient(180deg, #0b1418, #080d11);
+      border: 2px solid #1f3338;
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow:
+        0 0 0 1px #0b1c20 inset,
+        0 0 20px #0a2412,
+        0 0 60px #08150d;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02) 0,
+        rgba(255, 255, 255, 0.02) 1px,
+        transparent 2px,
+        transparent 3px
+      );
+      opacity: 0.25;
+    }
+
+    .hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.45);
+    }
+
+    .score {
+      color: var(--neon);
+      font-weight: 700;
+    }
+
+    canvas {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        #060c0f;
+      background-size: 24px 24px;
+      border: 2px solid #173338;
+      border-radius: 6px;
+      display: block;
+      box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(57, 255, 20, 0.12);
+      image-rendering: pixelated;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(2, 6, 8, 0.78);
+      backdrop-filter: blur(2px);
+    }
+
+    .overlay.show {
+      display: grid;
+    }
+
+    .panel {
+      background: #081015;
+      border: 2px solid #1d363d;
+      border-radius: 8px;
+      padding: 18px 22px;
+      text-align: center;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .panel h2 {
+      color: var(--danger);
+      margin-bottom: 8px;
+      font-size: 28px;
+      text-shadow: 0 0 10px rgba(255, 63, 63, 0.5);
+    }
+
+    .panel p {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .panel button {
+      border: 1px solid #2f5d39;
+      background: #0f1d14;
+      color: var(--neon);
+      font-family: inherit;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .panel button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
+    }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-shell">
+    <div class="hud">
+      <div>Retro Neon Snake</div>
+      <div>Score: <span id="score" class="score">0</span></div>
+    </div>
+
+    <canvas id="game" width="480" height="480" aria-label="Snake game"></canvas>
+
+    <div id="overlay" class="overlay" role="dialog" aria-modal="true">
+      <div class="panel">
+        <h2>Game Over</h2>
+        <p>Final Score: <span id="final-score" class="score">0</span></p>
+        <button id="restart">Restart</button>
+        <div class="hint">Use arrow keys or WASD to move</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("game");
+    const ctx = canvas.getContext("2d");
+    const scoreEl = document.getElementById("score");
+    const finalScoreEl = document.getElementById("final-score");
+    const overlay = document.getElementById("overlay");
+    const restartBtn = document.getElementById("restart");
+
+    const tileSize = 24;
+    const tiles = canvas.width / tileSize;
+    const speedMs = 115;
+
+    let snake;
+    let dir;
+    let nextDir;
+    let food;
+    let score;
+    let loopId;
+    let running;
+
+    function randomEmptyCell() {
+      let pos;
+      do {
+        pos = {
+          x: Math.floor(Math.random() * tiles),
+          y: Math.floor(Math.random() * tiles)
+        };
+      } while (snake.some(part => part.x === pos.x && part.y === pos.y));
+      return pos;
+    }
+
+    function resetGame() {
+      snake = [
+        { x: 10, y: 10 },
+        { x: 9, y: 10 },
+        { x: 8, y: 10 }
+      ];
+      dir = { x: 1, y: 0 };
+      nextDir = { x: 1, y: 0 };
+      food = randomEmptyCell();
+      score = 0;
+      running = true;
+      scoreEl.textContent = score;
+      overlay.classList.remove("show");
+
+      if (loopId) clearInterval(loopId);
+      loopId = setInterval(gameTick, speedMs);
+      draw();
+    }
+
+    function endGame() {
+      running = false;
+      clearInterval(loopId);
+      finalScoreEl.textContent = score;
+      overlay.classList.add("show");
+    }
+
+    function gameTick() {
+      if (!running) return;
+
+      dir = nextDir;
+      const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+
+      const hitWall = head.x < 0 || head.x >= tiles || head.y < 0 || head.y >= tiles;
+      const hitSelf = snake.some(part => part.x === head.x && part.y === head.y);
+      if (hitWall || hitSelf) {
+        endGame();
+        return;
+      }
+
+      snake.unshift(head);
+
+      if (head.x === food.x && head.y === food.y) {
+        score += 10;
+        scoreEl.textContent = score;
+        food = randomEmptyCell();
+      } else {
+        snake.pop();
+      }
+
+      draw();
+    }
+
+    function drawCell(x, y, color, glow = false) {
+      const px = x * tileSize;
+      const py = y * tileSize;
+
+      if (glow) {
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 12;
+      } else {
+        ctx.shadowBlur = 0;
+      }
+
+      ctx.fillStyle = color;
+      ctx.fillRect(px + 1, py + 1, tileSize - 2, tileSize - 2);
+      ctx.shadowBlur = 0;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      drawCell(food.x, food.y, "#ff5f1f", true);
+
+      snake.forEach((segment, i) => {
+        if (i === 0) {
+          drawCell(segment.x, segment.y, "#6eff2a", true);
+        } else {
+          drawCell(segment.x, segment.y, "#39ff14", false);
+        }
+      });
+    }
+
+    function setDirection(x, y) {
+      if (!running) return;
+      if (x === -dir.x && y === -dir.y) return;
+      nextDir = { x, y };
+    }
+
+    document.addEventListener("keydown", (e) => {
+      const key = e.key.toLowerCase();
+
+      if (["arrowup", "arrowdown", "arrowleft", "arrowright", "w", "a", "s", "d"].includes(key)) {
+        e.preventDefault();
+      }
+
+      if (key === "arrowup" || key === "w") setDirection(0, -1);
+      if (key === "arrowdown" || key === "s") setDirection(0, 1);
+      if (key === "arrowleft" || key === "a") setDirection(-1, 0);
+      if (key === "arrowright" || key === "d") setDirection(1, 0);
+
+      if (!running && key === "enter") {
+        resetGame();
+      }
+    });
+
+    restartBtn.addEventListener("click", resetGame);
+
+    resetGame();
+  </script>
+</body>
+</html>
