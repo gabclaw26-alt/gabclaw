@@ -1,0 +1,6 @@
+[2026-02-25 04:00:01] === Starting OpenClaw daily maintenance ===
+[2026-02-25 04:00:01] Current version before update: unknown
+[2026-02-25 04:00:01] Running OpenClaw update...
+[2026-02-25 04:00:01] Update output: /home/gabclaw/vault/scripts/openclaw-maintenance.sh: line 31: openclaw: command not found
+[2026-02-25 04:00:01] ERROR: Update failed with exit code 127
+{"ok":true,"result":{"message_id":364,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1771992002,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 127)\n- Current version: unknown\n- See logs for details"}}
