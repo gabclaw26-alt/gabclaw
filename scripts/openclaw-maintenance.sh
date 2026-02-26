@@ -20,15 +20,17 @@ send_telegram() {
     fi
 }
 
+OPENCLAW_BIN="/home/gabclaw/.npm-global/bin/openclaw"
+
 log "=== Starting OpenClaw daily maintenance ==="
 
 # Step 1: Check current version
-BEFORE_VERSION=$(openclaw --version 2>/dev/null || echo "unknown")
+BEFORE_VERSION=$($OPENCLAW_BIN --version 2>/dev/null || echo "unknown")
 log "Current version before update: $BEFORE_VERSION"
 
 # Step 2: Run update
 log "Running OpenClaw update..."
-UPDATE_OUTPUT=$(openclaw update --yes --json 2>&1)
+UPDATE_OUTPUT=$($OPENCLAW_BIN update --yes --json 2>&1)
 UPDATE_EXIT_CODE=$?
 
 log "Update output: $UPDATE_OUTPUT"
@@ -40,12 +42,12 @@ if [ $UPDATE_EXIT_CODE -ne 0 ]; then
 fi
 
 # Step 3: Check new version
-AFTER_VERSION=$(openclaw --version 2>/dev/null || echo "unknown")
+AFTER_VERSION=$($OPENCLAW_BIN --version 2>/dev/null || echo "unknown")
 log "Version after update: $AFTER_VERSION"
 
 # Step 4: Restart gateway
 log "Restarting gateway..."
-if openclaw gateway restart 2>> "$LOG_FILE"; then
+if $OPENCLAW_BIN gateway restart 2>> "$LOG_FILE"; then
     log "Gateway restarted successfully"
 else
     log "WARNING: Gateway restart may have failed"
