@@ -1,7 +1,7 @@
 # Active Projects
 
 ## Fin/
-**Status: Active** | Last updated: 2026-02-26
+**Status: Active** | Last updated: 2026-02-27
 - Portfolio tracking project
 - Files: current_prices.json, portfolio.json, transactions.json
 - Visualizations: portfolio_by_asset.png, portfolio_heatmap.png
