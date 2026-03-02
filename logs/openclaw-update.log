@@ -95,4 +95,32 @@ Gateway service check failed: Error: systemctl --user unavailable: Failed to con
 }
 Gateway service check failed: Error: systemctl --user unavailable: Failed to connect to bus: No medium found
 [2026-03-01 04:05:32] ERROR: Update failed with exit code 1
-{"ok":true,"result":{"message_id":593,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772337933,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}
+{"ok":true,"result":{"message_id":593,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772337933,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}[2026-03-02 04:00:01] === Starting OpenClaw daily maintenance ===
+[2026-03-02 04:00:11] Current version before update: 2026.2.26
+[2026-03-02 04:00:11] Running OpenClaw update...
+[2026-03-02 04:04:47] Update output: {
+  "status": "ok",
+  "mode": "npm",
+  "root": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+  "before": {
+    "version": "2026.2.26"
+  },
+  "after": {
+    "version": "2026.2.26"
+  },
+  "steps": [
+    {
+      "name": "global update",
+      "command": "npm i -g openclaw@latest --no-fund --no-audit --loglevel=error",
+      "cwd": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+      "durationMs": 262458,
+      "exitCode": 0,
+      "stdoutTail": "\nchanged 714 packages in 4m",
+      "stderrTail": null
+    }
+  ],
+  "durationMs": 262817
+}
+Gateway service check failed: Error: systemctl --user unavailable: Failed to connect to bus: No medium found
+[2026-03-02 04:04:47] ERROR: Update failed with exit code 1
+{"ok":true,"result":{"message_id":598,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772424287,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}
