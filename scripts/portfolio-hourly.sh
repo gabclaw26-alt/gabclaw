@@ -66,8 +66,8 @@ movers.sort(key=lambda x: abs(x[3]), reverse=True)
 movers = movers[:5]
 
 mover_lines = []
-for t, prev, curr, pct, curr in movers[:3]:
-    if curr == 'BRL':
+for t, prev, curr, pct, currency in movers[:3]:
+    if currency == 'BRL':
         mover_lines.append(f"• {t}: R${prev:.2f} → R${curr:.2f} ({pct:+.1f}%)")
     else:
         mover_lines.append(f"• {t}: ${prev:,.0f} → ${curr:,.0f} ({pct:+.1f}%)")
