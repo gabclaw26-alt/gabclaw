@@ -1,0 +1,29 @@
+[2026-03-03 04:00:01] === Starting OpenClaw daily maintenance ===
+[2026-03-03 04:00:11] Current version before update: 2026.2.26
+[2026-03-03 04:00:11] Running OpenClaw update...
+[2026-03-03 04:03:00] Update output: {
+  "status": "ok",
+  "mode": "npm",
+  "root": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+  "before": {
+    "version": "2026.2.26"
+  },
+  "after": {
+    "version": "2026.3.1"
+  },
+  "steps": [
+    {
+      "name": "global update",
+      "command": "npm i -g openclaw@latest --no-fund --no-audit --loglevel=error",
+      "cwd": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+      "durationMs": 136433,
+      "exitCode": 0,
+      "stdoutTail": "\nadded 2 packages, removed 17 packages, and changed 697 packages in 2m",
+      "stderrTail": "npm notice\nnpm notice New major version of npm available! 10.9.4 -> 11.11.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0\nnpm notice To update run: npm install -g npm@11.11.0\nnpm notice"
+    }
+  ],
+  "durationMs": 136884
+}
+Gateway service check failed: Error: systemctl --user unavailable: Failed to connect to bus: No medium found
+[2026-03-03 04:03:00] ERROR: Update failed with exit code 1
+{"ok":true,"result":{"message_id":606,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772510581,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}
