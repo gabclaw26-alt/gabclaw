@@ -207,6 +207,53 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Outputs — Where to Put Generated Files
+
+When you create something, put it in the right place. Consistent paths make retrieval fast.
+
+| What you made | Where it goes | Example path |
+|---------------|---------------|-------------|
+| Image / visual | `outputs/images/YYYY-MM-DD/` | `outputs/images/2026-03-03/chart.png` |
+| Report / analysis | `outputs/reports/YYYY-MM-DD/` | `outputs/reports/2026-03-03/portfolio-summary.md` |
+| Web research / scrape | `outputs/research/YYYY-MM-DD/` | `outputs/research/2026-03-03/competitor-analysis.md` |
+| Code experiment | `outputs/code/` | `outputs/code/snake-game.html` |
+| Data export / dump | `outputs/data/YYYY-MM-DD/` | `outputs/data/2026-03-03/prices.json` |
+
+**Never dump things in `tmp/`.** `tmp/` is for intermediate files that you'll delete within the same session. Anything worth keeping goes in `outputs/`.
+
+Generated images are gitignored (large files). Everything else in `outputs/` is tracked by git and synced hourly.
+
+## Tasks — How to Track Work
+
+Use `tasks/` as a lightweight task queue:
+
+- **`tasks/pending/`** — new tasks, user requests, reminders waiting to be picked up
+- **`tasks/active/`** — move here when you start working on something
+- **`tasks/done/`** — move here when done, add a brief outcome note
+
+Name task files: `YYYY-MM-DD-short-description.md`
+
+```markdown
+# Task: [title]
+Created: YYYY-MM-DD
+Priority: high | normal | low
+
+## What to do
+[description]
+
+## Done
+[fill in when completing]
+```
+
+For short one-off reminders, `HEARTBEAT.md` is simpler than a full task file.
+
+## Retrieval — Finding Things Fast
+
+- `memory/indices.md` — master lookup: what's in each daily file + topic map. **Update during dream cycle.**
+- `projects/README.md` — project status at a glance
+- `outputs/*/YYYY-MM-DD/` — find any output by type + date
+- `tasks/active/` — what's currently in flight
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.

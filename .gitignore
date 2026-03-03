@@ -11,3 +11,15 @@ openclaw.json
 # System
 .DS_Store
 Thumbs.db
+
+# Large generated outputs — don't bloat git history
+outputs/images/
+tmp/
+
+# Python virtual environments
+**/.venv/
+**/venv/
+
+# Node build artifacts in projects (they have their own repos)
+projects/*/node_modules/
+projects/*/dist/
