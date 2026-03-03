@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-03T09:00:05.322487",
+  "timestamp": "2026-03-03T10:00:05.906219",
   "usd_brl_rate": 5.18779993057251,
   "holdings": [
     {
@@ -7,11 +7,11 @@
       "ticker": "BTC",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 66989.2109,
-      "price_usd": 66989.2109,
+      "price_local": 66642.8906,
+      "price_usd": 66642.8906,
       "quantity": 0.3760367,
-      "value_local": 25190.4,
-      "value_usd": 25190.4
+      "value_local": 25060.17,
+      "value_usd": 25060.17
     },
     {
       "asset": "IAU",
@@ -194,11 +194,11 @@
       "ticker": "ETH",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 1950.4966,
-      "price_usd": 1950.4966,
+      "price_local": 1951.6783,
+      "price_usd": 1951.6783,
       "quantity": 1.166041,
-      "value_local": 2274.36,
-      "value_usd": 2274.36
+      "value_local": 2275.74,
+      "value_usd": 2275.74
     },
     {
       "asset": "VRTA11",
@@ -403,11 +403,11 @@
       "ticker": "AVAX",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 9.0047,
-      "price_usd": 9.0047,
+      "price_local": 8.9945,
+      "price_usd": 8.9945,
       "quantity": 83.86027,
-      "value_local": 755.14,
-      "value_usd": 755.14
+      "value_local": 754.28,
+      "value_usd": 754.28
     },
     {
       "asset": "BLAU3",
