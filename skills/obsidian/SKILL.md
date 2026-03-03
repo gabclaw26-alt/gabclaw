@@ -25,7 +25,8 @@ agent interacts with them in two ways:
 2. **`ob` CLI** — official `obsidian-headless` tool for Obsidian Sync operations
 
 Binary: `/home/gabclaw/.npm-global/bin/ob`
-Default vault: `/home/gabclaw/vault` (unless user specifies another)
+Default vault: `/home/gabclaw/obsidian` (PARA knowledge vault — Projects/Areas/Resources/Archive)
+Agent workspace: `/home/gabclaw/vault` (OpenClaw agent files, separate from knowledge vault)
 
 ---
 
@@ -73,8 +74,9 @@ find ~/vault -name "*.md" -newer ~/vault/memory/$(date +%Y-%m-%d).md
 
 ### Daily notes
 
-Daily notes live at `~/vault/memory/YYYY-MM-DD.md` by convention.
-To read today's: `Read ~/vault/memory/$(date +%Y-%m-%d).md`
+Daily notes live at `/home/gabclaw/obsidian/00 - Inbox/YYYY-MM-DD.md` or
+directly in the vault root. Template at `Templates/Daily Note Template.md`.
+To read today's: `Read "/home/gabclaw/obsidian/00 - Inbox/$(date +%Y-%m-%d).md"`
 To append: use `Edit` to add content at the bottom.
 
 ### Tags
@@ -169,27 +171,34 @@ ob sync-unlink --vault ~/vault/my-notes   # disconnect from sync
 
 ### "Search my vault for X"
 ```bash
-grep -r "X" ~/vault --include="*.md" -l
+grep -r "X" "/home/gabclaw/obsidian" --include="*.md" -l
 # then Read the relevant files
 ```
 
 ### "Create a note about X"
-1. Choose a logical path under `~/vault/`
-2. Write the file with frontmatter + content using `Write`
-3. Confirm with the user if unsure where it belongs
+1. Determine PARA category: Projects (active), Areas (ongoing), Resources (reference), Archive
+2. Write the file with frontmatter + content using `Write` to the right subdirectory
+3. Use the appropriate template from `Templates/` as a starting point
+
+### "What are my active projects?"
+```bash
+grep -r "^status: active" "/home/gabclaw/obsidian/10 - Projects" --include="*.md" -l
+```
 
 ### "Add to today's daily note"
-```bash
-# Append to today's memory file
-# Use Edit tool on ~/vault/memory/$(date +%Y-%m-%d).md
-```
+Create or edit `/home/gabclaw/obsidian/00 - Inbox/$(date +%Y-%m-%d).md`
+using the `Daily Note Template.md` as a starting point.
 
 ### "Set up Obsidian Sync"
 ```bash
-ob login
-ob sync-list-remote   # see available remote vaults
-ob sync-setup --vault /path/to/vault
-ob sync --continuous  # keep running in background
+# Login first (requires Obsidian account credentials)
+ob login --email YOUR_EMAIL --password YOUR_PASSWORD
+
+# Then set up sync for the knowledge vault
+ob sync-list-remote                              # see available remote vaults
+ob sync-create-remote --name "gabclaw-obsidian" # create new remote if needed
+ob sync-setup --vault /home/gabclaw/obsidian
+ob sync --vault /home/gabclaw/obsidian --continuous  # keep running in background
 ```
 
 ---
