@@ -1,0 +1,6 @@
+[submodule "projects/dr-decio-site"]
+	path = projects/dr-decio-site
+	url = https://github.com/gabclaw26-alt/dr-decio-psicanalista.git
+[submodule "projects/reservoir-engineering/pyResToolbox"]
+	path = projects/reservoir-engineering/pyResToolbox
+	url = https://github.com/mwburgoyne/pyResToolbox.git
