@@ -26,4 +26,6 @@
 }
 Gateway service check failed: Error: systemctl --user unavailable: Failed to connect to bus: No medium found
 [2026-03-03 04:03:00] ERROR: Update failed with exit code 1
-{"ok":true,"result":{"message_id":606,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772510581,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}
+{"ok":true,"result":{"message_id":606,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772510581,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}[2026-03-04 04:00:01] === Starting OpenClaw daily maintenance ===
+[2026-03-04 04:00:02] Current version before update: 2026.3.2
+[2026-03-04 04:00:02] Running OpenClaw update...
