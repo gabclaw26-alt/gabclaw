@@ -29,3 +29,29 @@ Gateway service check failed: Error: systemctl --user unavailable: Failed to con
 {"ok":true,"result":{"message_id":606,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772510581,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.2.26\n- See logs for details"}}[2026-03-04 04:00:01] === Starting OpenClaw daily maintenance ===
 [2026-03-04 04:00:02] Current version before update: 2026.3.2
 [2026-03-04 04:00:02] Running OpenClaw update...
+[2026-03-04 04:14:07] Update output: {
+  "status": "ok",
+  "mode": "npm",
+  "root": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+  "before": {
+    "version": "2026.3.2"
+  },
+  "after": {
+    "version": "2026.3.2"
+  },
+  "steps": [
+    {
+      "name": "global update",
+      "command": "npm i -g openclaw@latest --no-fund --no-audit --loglevel=error",
+      "cwd": "/home/gabclaw/.npm-global/lib/node_modules/openclaw",
+      "durationMs": 824672,
+      "exitCode": 0,
+      "stdoutTail": "\nadded 1 package, removed 2 packages, and changed 697 packages in 14m",
+      "stderrTail": null
+    }
+  ],
+  "durationMs": 825050
+}
+Gateway service check failed: Error: systemctl is-enabled unavailable: Failed to connect to bus: No medium found
+[2026-03-04 04:14:07] ERROR: Update failed with exit code 1
+{"ok":true,"result":{"message_id":692,"from":{"id":8724639176,"is_bot":true,"first_name":"Gabclawbot","username":"Gabclaw26bot"},"chat":{"id":8304885245,"first_name":"G","last_name":"S","type":"private"},"date":1772597648,"text":"\ud83d\udd34 *OpenClaw Update FAILED*\n\n- Error: Update command failed (exit code 1)\n- Current version: 2026.3.2\n- See logs for details"}}
