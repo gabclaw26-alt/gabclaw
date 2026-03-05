@@ -1,388 +1,388 @@
 {
-  "timestamp": "2026-03-04T20:00:08.652159",
-  "usd_brl_rate": 5.21750020980835,
+  "timestamp": "2026-03-05T20:00:06.791828",
+  "usd_brl_rate": 5.2870001792907715,
   "holdings": [
     {
       "asset": "Bitcoin",
       "ticker": "BTC",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 73731.8516,
-      "price_usd": 73731.8516,
+      "price_local": 70952.4609,
+      "price_usd": 70952.4609,
       "quantity": 0.3760367,
-      "value_local": 27725.88,
-      "value_usd": 27725.88
+      "value_local": 26680.73,
+      "value_usd": 26680.73
     },
     {
       "asset": "IAU",
       "ticker": "IAU",
       "type": "Gold",
       "local_currency": "USD",
-      "price_local": 96.705,
-      "price_usd": 96.705,
+      "price_local": 95.305,
+      "price_usd": 95.305,
       "quantity": 355,
-      "value_local": 34330.28,
-      "value_usd": 34330.28
+      "value_local": 33833.28,
+      "value_usd": 33833.28
     },
     {
       "asset": "BIL",
       "ticker": "BIL",
       "type": "Fixed Income",
       "local_currency": "USD",
-      "price_local": 91.4029,
-      "price_usd": 91.4029,
+      "price_local": 91.415,
+      "price_usd": 91.415,
       "quantity": 370,
-      "value_local": 33819.07,
-      "value_usd": 33819.07
+      "value_local": 33823.55,
+      "value_usd": 33823.55
     },
     {
       "asset": "WEGE3",
       "ticker": "WEGE3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 47.54,
-      "price_usd": 9.1116,
+      "price_local": 47.21,
+      "price_usd": 8.9294,
       "quantity": 2701,
-      "value_local": 128405.54,
-      "value_usd": 24610.55
+      "value_local": 127514.21,
+      "value_usd": 24118.44
     },
     {
       "asset": "ITUB3",
       "ticker": "ITUB3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 42.38,
-      "price_usd": 8.1227,
+      "price_local": 41.27,
+      "price_usd": 7.8059,
       "quantity": 2585,
-      "value_local": 109552.3,
-      "value_usd": 20997.09
+      "value_local": 106682.95,
+      "value_usd": 20178.35
     },
     {
       "asset": "TFLO",
       "ticker": "TFLO",
       "type": "Fixed Income",
       "local_currency": "USD",
-      "price_local": 50.495,
-      "price_usd": 50.495,
+      "price_local": 50.5001,
+      "price_usd": 50.5001,
       "quantity": 253.4945,
-      "value_local": 12800.2,
-      "value_usd": 12800.2
+      "value_local": 12801.5,
+      "value_usd": 12801.5
     },
     {
       "asset": "SQQQ",
       "ticker": "SQQQ",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 69.0,
-      "price_usd": 69.0,
+      "price_local": 71.79,
+      "price_usd": 71.79,
       "quantity": 15,
-      "value_local": 1035.0,
-      "value_usd": 1035.0
+      "value_local": 1076.85,
+      "value_usd": 1076.85
     },
     {
       "asset": "HGLG11",
       "ticker": "HGLG11",
       "type": "FII",
       "local_currency": "BRL",
-      "price_local": 158.03,
-      "price_usd": 30.2885,
+      "price_local": 157.93,
+      "price_usd": 29.8714,
       "quantity": 332,
-      "value_local": 52465.96,
-      "value_usd": 10055.77
+      "value_local": 52432.76,
+      "value_usd": 9917.3
     },
     {
       "asset": "XPML11",
       "ticker": "XPML11",
       "type": "FII",
       "local_currency": "BRL",
-      "price_local": 110.64,
-      "price_usd": 21.2056,
+      "price_local": 110.37,
+      "price_usd": 20.8757,
       "quantity": 469,
-      "value_local": 51890.16,
-      "value_usd": 9945.41
+      "value_local": 51763.53,
+      "value_usd": 9790.72
     },
     {
       "asset": "ASML",
       "ticker": "ASML",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 1402.8413,
-      "price_usd": 1402.8413,
+      "price_local": 1350.59,
+      "price_usd": 1350.59,
       "quantity": 4.0,
-      "value_local": 5611.37,
-      "value_usd": 5611.37
+      "value_local": 5402.36,
+      "value_usd": 5402.36
     },
     {
       "asset": "UBS Group",
       "ticker": "UBS",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 39.78,
-      "price_usd": 39.78,
+      "price_local": 38.94,
+      "price_usd": 38.94,
       "quantity": 210,
-      "value_local": 8353.8,
-      "value_usd": 8353.8
+      "value_local": 8177.4,
+      "value_usd": 8177.4
     },
     {
       "asset": "TSMC",
       "ticker": "TSM",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 359.64,
-      "price_usd": 359.64,
+      "price_local": 348.65,
+      "price_usd": 348.65,
       "quantity": 13,
-      "value_local": 4675.32,
-      "value_usd": 4675.32
+      "value_local": 4532.45,
+      "value_usd": 4532.45
     },
     {
       "asset": "Prologis",
       "ticker": "PLD",
       "type": "REITS",
       "local_currency": "USD",
-      "price_local": 139.28,
-      "price_usd": 139.28,
+      "price_local": 136.905,
+      "price_usd": 136.905,
       "quantity": 54.5,
-      "value_local": 7590.76,
-      "value_usd": 7590.76
+      "value_local": 7461.32,
+      "value_usd": 7461.32
     },
     {
       "asset": "SAPR4",
       "ticker": "SAPR4",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 8.21,
-      "price_usd": 1.5736,
+      "price_local": 8.0,
+      "price_usd": 1.5131,
       "quantity": 4900,
-      "value_local": 40229.0,
-      "value_usd": 7710.4
+      "value_local": 39200.0,
+      "value_usd": 7414.41
     },
     {
       "asset": "Realty Income",
       "ticker": "O",
       "type": "REITS",
       "local_currency": "USD",
-      "price_local": 66.09,
-      "price_usd": 66.09,
+      "price_local": 64.59,
+      "price_usd": 64.59,
       "quantity": 95,
-      "value_local": 6278.55,
-      "value_usd": 6278.55
+      "value_local": 6136.05,
+      "value_usd": 6136.05
     },
     {
       "asset": "VALE3",
       "ticker": "VALE3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 84.51,
-      "price_usd": 16.1974,
+      "price_local": 80.81,
+      "price_usd": 15.2847,
       "quantity": 439,
-      "value_local": 37099.89,
-      "value_usd": 7110.66
+      "value_local": 35475.59,
+      "value_usd": 6709.97
     },
     {
       "asset": "BBDC3",
       "ticker": "BBDC3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 17.69,
-      "price_usd": 3.3905,
+      "price_local": 17.13,
+      "price_usd": 3.24,
       "quantity": 1800,
-      "value_local": 31842.0,
-      "value_usd": 6102.92
+      "value_local": 30834.0,
+      "value_usd": 5832.04
     },
     {
       "asset": "Ethereum",
       "ticker": "ETH",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 2181.1135,
-      "price_usd": 2181.1135,
+      "price_local": 2074.6865,
+      "price_usd": 2074.6865,
       "quantity": 1.166041,
-      "value_local": 2543.27,
-      "value_usd": 2543.27
+      "value_local": 2419.17,
+      "value_usd": 2419.17
     },
     {
       "asset": "VRTA11",
       "ticker": "VRTA11",
       "type": "FII",
       "local_currency": "BRL",
-      "price_local": 78.2,
-      "price_usd": 14.988,
+      "price_local": 78.36,
+      "price_usd": 14.8213,
       "quantity": 275,
-      "value_local": 21505.0,
-      "value_usd": 4121.71
+      "value_local": 21549.0,
+      "value_usd": 4075.85
     },
     {
       "asset": "FLRY3",
       "ticker": "FLRY3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 16.68,
-      "price_usd": 3.1969,
+      "price_local": 16.12,
+      "price_usd": 3.049,
       "quantity": 1244,
-      "value_local": 20749.92,
-      "value_usd": 3976.99
+      "value_local": 20053.28,
+      "value_usd": 3792.94
     },
     {
       "asset": "Alphabet",
       "ticker": "GOOGL",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 302.86,
-      "price_usd": 302.86,
+      "price_local": 299.06,
+      "price_usd": 299.06,
       "quantity": 13,
-      "value_local": 3937.18,
-      "value_usd": 3937.18
+      "value_local": 3887.78,
+      "value_usd": 3887.78
     },
     {
       "asset": "Microsoft",
       "ticker": "MSFT",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 409.3,
-      "price_usd": 409.3,
+      "price_local": 409.74,
+      "price_usd": 409.74,
       "quantity": 7,
-      "value_local": 2865.1,
-      "value_usd": 2865.1
+      "value_local": 2868.18,
+      "value_usd": 2868.18
     },
     {
       "asset": "NextEra",
       "ticker": "NEE",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 92.752,
-      "price_usd": 92.752,
+      "price_local": 90.78,
+      "price_usd": 90.78,
       "quantity": 40,
-      "value_local": 3710.08,
-      "value_usd": 3710.08
+      "value_local": 3631.2,
+      "value_usd": 3631.2
     },
     {
       "asset": "Cameco",
       "ticker": "CCJ",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 120.84,
-      "price_usd": 120.84,
+      "price_local": 112.765,
+      "price_usd": 112.765,
       "quantity": 35,
-      "value_local": 4229.4,
-      "value_usd": 4229.4
+      "value_local": 3946.77,
+      "value_usd": 3946.77
     },
     {
       "asset": "EGIE3",
       "ticker": "EGIE3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 33.23,
-      "price_usd": 6.369,
+      "price_local": 31.92,
+      "price_usd": 6.0375,
       "quantity": 400,
-      "value_local": 13292.0,
-      "value_usd": 2547.58
+      "value_local": 12768.0,
+      "value_usd": 2414.98
     },
     {
       "asset": "SLCE3",
       "ticker": "SLCE3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 16.34,
-      "price_usd": 3.1318,
+      "price_local": 16.29,
+      "price_usd": 3.0811,
       "quantity": 838,
-      "value_local": 13692.92,
-      "value_usd": 2624.42
+      "value_local": 13651.02,
+      "value_usd": 2582.0
     },
     {
       "asset": "TAEE4",
       "ticker": "TAEE4",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 14.49,
-      "price_usd": 2.7772,
+      "price_local": 14.17,
+      "price_usd": 2.6802,
       "quantity": 1100,
-      "value_local": 15939.0,
-      "value_usd": 3054.91
+      "value_local": 15587.0,
+      "value_usd": 2948.17
     },
     {
       "asset": "Costco",
       "ticker": "COST",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 1007.56,
-      "price_usd": 1007.56,
+      "price_local": 981.125,
+      "price_usd": 981.125,
       "quantity": 3,
-      "value_local": 3022.68,
-      "value_usd": 3022.68
+      "value_local": 2943.38,
+      "value_usd": 2943.38
     },
     {
       "asset": "DBS Group",
       "ticker": "DBSDY",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 173.5,
-      "price_usd": 173.5,
+      "price_local": 172.45,
+      "price_usd": 172.45,
       "quantity": 50,
-      "value_local": 8675.0,
-      "value_usd": 8675.0
+      "value_local": 8622.5,
+      "value_usd": 8622.5
     },
     {
       "asset": "Amazon",
       "ticker": "AMZN",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 216.91,
-      "price_usd": 216.91,
+      "price_local": 218.04,
+      "price_usd": 218.04,
       "quantity": 10,
-      "value_local": 2169.1,
-      "value_usd": 2169.1
+      "value_local": 2180.4,
+      "value_usd": 2180.4
     },
     {
       "asset": "Apple",
       "ticker": "AAPL",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 263.18,
-      "price_usd": 263.18,
+      "price_local": 257.75,
+      "price_usd": 257.75,
       "quantity": 9,
-      "value_local": 2368.62,
-      "value_usd": 2368.62
+      "value_local": 2319.75,
+      "value_usd": 2319.75
     },
     {
       "asset": "Lockheed",
       "ticker": "LMT",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 659.9188,
-      "price_usd": 659.9188,
+      "price_local": 651.47,
+      "price_usd": 651.47,
       "quantity": 5,
-      "value_local": 3299.59,
-      "value_usd": 3299.59
+      "value_local": 3257.35,
+      "value_usd": 3257.35
     },
     {
       "asset": "Linde",
       "ticker": "LIN",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 500.2999,
-      "price_usd": 500.2999,
+      "price_local": 491.995,
+      "price_usd": 491.995,
       "quantity": 8.3,
-      "value_local": 4152.49,
-      "value_usd": 4152.49
+      "value_local": 4083.56,
+      "value_usd": 4083.56
     },
     {
       "asset": "ExxonMobil",
       "ticker": "XOM",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 149.77,
-      "price_usd": 149.77,
+      "price_local": 150.245,
+      "price_usd": 150.245,
       "quantity": 50,
-      "value_local": 7488.5,
-      "value_usd": 7488.5
+      "value_local": 7512.25,
+      "value_usd": 7512.25
     },
     {
       "asset": "MicroStrategy",
       "ticker": "MSTR",
       "type": "Stocks",
       "local_currency": "USD",
-      "price_local": 147.64,
-      "price_usd": 147.64,
+      "price_local": 139.34,
+      "price_usd": 139.34,
       "quantity": 0,
       "value_local": 0.0,
       "value_usd": 0.0
@@ -392,99 +392,99 @@
       "ticker": "SANB3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 16.46,
-      "price_usd": 3.1548,
+      "price_local": 15.97,
+      "price_usd": 3.0206,
       "quantity": 600,
-      "value_local": 9876.0,
-      "value_usd": 1892.86
+      "value_local": 9582.0,
+      "value_usd": 1812.37
     },
     {
       "asset": "Avalanche",
       "ticker": "AVAX",
       "type": "Crypto",
       "local_currency": "USD",
-      "price_local": 9.6923,
-      "price_usd": 9.6923,
+      "price_local": 9.3855,
+      "price_usd": 9.3855,
       "quantity": 83.86027,
-      "value_local": 812.8,
-      "value_usd": 812.8
+      "value_local": 787.07,
+      "value_usd": 787.07
     },
     {
       "asset": "BLAU3",
       "ticker": "BLAU3",
       "type": "Stocks",
       "local_currency": "BRL",
-      "price_local": 10.94,
-      "price_usd": 2.0968,
+      "price_local": 10.75,
+      "price_usd": 2.0333,
       "quantity": 470,
-      "value_local": 5141.8,
-      "value_usd": 985.49
+      "value_local": 5052.5,
+      "value_usd": 955.65
     },
     {
       "asset": "RECR11",
       "ticker": "RECR11",
       "type": "FII",
       "local_currency": "BRL",
-      "price_local": 82.28,
-      "price_usd": 15.77,
+      "price_local": 82.34,
+      "price_usd": 15.574,
       "quantity": 21,
-      "value_local": 1727.88,
-      "value_usd": 331.17
+      "value_local": 1729.14,
+      "value_usd": 327.06
     },
     {
       "asset": "Tesouro IPCA+ 2026",
       "ticker": "Tesouro IPCA+ 2026",
       "type": "Fixed Income",
       "local_currency": "BRL",
-      "price_local": 4422.5,
-      "price_usd": 847.6281,
+      "price_local": 4424.51,
+      "price_usd": 836.8659,
       "quantity": 3.12,
-      "value_local": 13798.2,
-      "value_usd": 2644.6
+      "value_local": 13804.47,
+      "value_usd": 2611.02
     },
     {
       "asset": "Tesouro IPCA+ 2045",
       "ticker": "Tesouro IPCA+ 2045",
       "type": "Fixed Income",
       "local_currency": "BRL",
-      "price_local": 1266.22,
-      "price_usd": 242.6871,
+      "price_local": 1251.15,
+      "price_usd": 236.6465,
       "quantity": 6.03,
-      "value_local": 7635.31,
-      "value_usd": 1463.4
+      "value_local": 7544.43,
+      "value_usd": 1426.98
     },
     {
       "asset": "Tesouro IPCA+ 2050",
       "ticker": "Tesouro IPCA+ 2050",
       "type": "Fixed Income",
       "local_currency": "BRL",
-      "price_local": 911.17,
-      "price_usd": 174.6373,
+      "price_local": 897.25,
+      "price_usd": 169.7087,
       "quantity": 1.43,
-      "value_local": 1302.97,
-      "value_usd": 249.73
+      "value_local": 1283.07,
+      "value_usd": 242.68
     },
     {
       "asset": "Tesouro IPCA+ c/ Juros 2030",
       "ticker": "Tesouro IPCA+ c/ Juros 2030",
       "type": "Fixed Income",
       "local_currency": "BRL",
-      "price_local": 4356.99,
-      "price_usd": 835.0723,
+      "price_local": 4346.64,
+      "price_usd": 822.1373,
       "quantity": 1.0,
-      "value_local": 4356.99,
-      "value_usd": 835.07
+      "value_local": 4346.64,
+      "value_usd": 822.14
     },
     {
       "asset": "Tesouro Educa+ 2035",
       "ticker": "Tesouro Educa+ 2035",
       "type": "Fixed Income",
       "local_currency": "BRL",
-      "price_local": 2091.05,
-      "price_usd": 400.7762,
+      "price_local": 2072.75,
+      "price_usd": 392.0465,
       "quantity": 7.41,
-      "value_local": 15494.68,
-      "value_usd": 2969.75
+      "value_local": 15359.08,
+      "value_usd": 2905.06
     }
   ]
 }
