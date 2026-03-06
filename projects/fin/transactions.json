@@ -409,9 +409,10 @@
       {
         "ticker": "IAU",
         "currency": "USD",
-        "current_quantity": 355.0,
+        "current_quantity": 375.0,
         "transactions": [
-          {"date": "2025-11-10", "type": "buy", "quantity": 15.0, "gross_amount": 1156.95}
+          {"date": "2025-11-10", "type": "buy", "quantity": 15.0, "gross_amount": 1156.95},
+          {"date": "2026-01-30", "type": "buy", "quantity": 20.0, "gross_amount": 1835.00, "net_amount": null}
         ]
       },
       {
@@ -523,9 +524,10 @@
       {
         "ticker": "BITCOIN",
         "currency": "Crypto",
-        "current_quantity": 0.3760367,
+        "current_quantity": 0.3934027,
         "transactions": [
-          {"date": "2026-01-22", "type": "buy", "quantity": 0.0205287, "gross_amount": 1842.91, "net_amount": null}
+          {"date": "2026-01-22", "type": "buy", "quantity": 0.0205287, "gross_amount": 1842.91, "net_amount": null},
+          {"date": "2026-02-02", "type": "buy", "quantity": 0.017366, "gross_amount": 5000.00, "net_amount": null, "currency": "BRL"}
         ]
       },
       {"ticker": "ETHEREUM",  "currency": "Crypto", "current_quantity": 1.1660408156, "transactions": []},

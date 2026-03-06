@@ -3,7 +3,7 @@
     {
       "asset": "Bitcoin",
       "ticker": "BTC",
-      "quantity": 0.3760367,
+      "quantity": 0.3934027,
       "localCurrency": "USD",
       "sector": "Crypto",
       "country": "crypto",
@@ -13,7 +13,7 @@
     {
       "asset": "IAU",
       "ticker": "IAU",
-      "quantity": 355,
+      "quantity": 375,
       "localCurrency": "USD",
       "sector": "Gold",
       "country": "US",
